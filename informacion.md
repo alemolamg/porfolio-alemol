@@ -34,7 +34,6 @@ Durante el trabajo, realicé sobre todo trabajo de backend en el desarrollo de l
 
 
 
-
 ## Redactación de información
 
 Aquí pondré toda la información y la redactaré para poder añadirla al currículum.
