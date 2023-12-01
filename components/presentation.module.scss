@@ -9,5 +9,13 @@
 }
 
 .image {
-    border-radius: 50%;
+  border-radius: 50%;
+}
+
+.title {
+//   background-color: firebrick;
+  display: flex;
+  font-size: 3rem;
+  max-width: 30%;
+  justify-content: center;
 }

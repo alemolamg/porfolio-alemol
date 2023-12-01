@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "./presentation.module.scss";
 
-interface ImageWithTitleProps {}
-
 const Presentation: React.FC = () => {
   const imageURL = "/public/imagenAlemol.jpeg";
   return (
