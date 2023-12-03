@@ -7,10 +7,10 @@
 
 .head {
   display: flex;
-  flex-direction: row;
+  padding: 2rem;
   gap: 2rem;
+  flex-direction: row;
   justify-content: space-around;
-  padding: 1rem 0;
 }
 
 .image {
