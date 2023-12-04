@@ -10,7 +10,7 @@ export interface Skill {
 export default function Home() {
   const skills: Skill[] = [
     { name: "python", icon: "/skill-icons/python_icon.svg" },
-    { name: "kotlin", icon: "/skill-icons/9080475_brand_kotlin_icon.svg" },
+    { name: "kotlin", icon: "/skill-icons/Kotlin-Full-Color.svg" },
     // { name: "sql", icon: "image" },
     // { name: "java", icon: "image" },
   ];
