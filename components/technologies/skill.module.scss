@@ -1,7 +1,12 @@
 @import "~styles/abstracts";
 
-.skill-container {
+.skillContainer {
     background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    // width: 100%;
+    justify-content: space-around;
 }
 
 .card {
