@@ -1,8 +1,19 @@
 import Presentation from "../components/presentation";
 import SkillCard from "@/components/technologies/skillCard";
+import images from "../public/skill-icons/python_icon.svg"
+
+export interface Skill {
+  name: string;
+  icon: string;
+}
 
 export default function Home() {
-  const technologies = ["python", "kotlin", "sql", "java"];
+  const skills: Skill[] = [
+    { name: "python", icon: "/public/skill-icons/python_icon.svg" },
+    { name: "kotlin", icon: "image" },
+    { name: "sql", icon: "image" },
+    { name: "java", icon: "image" },
+  ];
 
   // interface TechnologiesProps {
   //   name: string;
@@ -12,9 +23,9 @@ export default function Home() {
     <main className="flex p-0 min-h-screen flex-col items-center justify-between">
       <Presentation />
 
-      <div className="flex flex-wrap gap-5 justify-around mt-5 bg-yellow-300 w-full">
-        {technologies.map((tecnologia, index) => (
-          <SkillCard key={index} name={tecnologia} />
+      <div className="flex flex-wrap gap-5 justify-around mt-5">
+        {skills.map((tecnologia, index) => (
+          <SkillCard key={index} skill={tecnologia} />
         ))}
       </div>
 
