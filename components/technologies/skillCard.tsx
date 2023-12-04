@@ -10,16 +10,16 @@ interface SkillProps {
 const SkillCard: React.FC<SkillProps> = ({ skill }) => {
   return (
     <div className={styles.container}>
-      <h2>{skill.name}</h2>
+      {/* <i className={styles.container}> */}
       <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src={skill.icon}
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      {/* <img src={skill.icon} alt={skill.name} /> */}
+        className={styles.icon}
+        src={skill.icon}
+        alt="Next.js Logo"
+        width={200}
+        height={200}
+      />
+      {/* <h3>{skill.name}</h3> */}
+      {/* </i> */}
     </div>
   );
 };

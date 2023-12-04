@@ -9,10 +9,10 @@ export interface Skill {
 
 export default function Home() {
   const skills: Skill[] = [
-    { name: "python", icon: "/public/skill-icons/python_icon.svg" },
-    { name: "kotlin", icon: "image" },
-    { name: "sql", icon: "image" },
-    { name: "java", icon: "image" },
+    { name: "python", icon: "/skill-icons/python_icon.svg" },
+    { name: "kotlin", icon: "/skill-icons/9080475_brand_kotlin_icon.svg" },
+    // { name: "sql", icon: "image" },
+    // { name: "java", icon: "image" },
   ];
 
   // interface TechnologiesProps {
