@@ -18,7 +18,7 @@ const SkillCard: React.FC<SkillProps> = ({ skill }) => {
         width={200}
         height={200}
       />
-      {/* <h3>{skill.name}</h3> */}
+      <h3 className="uppercase">{skill.name}</h3>
       {/* </i> */}
     </div>
   );

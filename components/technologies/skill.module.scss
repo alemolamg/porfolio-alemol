@@ -1,16 +1,19 @@
 @import "~styles/abstracts";
 
 .skillContainer {
-    background-color: aquamarine;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    // width: 100%;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+
+  @include from-md {
+    width: auto;
+  }
 }
 
 .card {
-  // background-color: rgb(70, 51, 26);
+  --box-size: 5rem;
+
   border-color: rgb(111, 66, 66);
   border-width: 0.2rem;
   border-radius: 10px;
@@ -19,19 +22,29 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  width: 8rem;
-  height: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: var(--box-size);
+  height: 5.5rem ;
+  font-size: 0.7rem;
 
   @include from-md {
     margin: 1rem;
+    width: auto;
+    height: auto;
+    max-width: 8rem;
+    max-height: 8rem;
+    font-size: 1rem;
   }
 
   .icon {
-    max-width: 80%;
+    max-width: 75%;
     color: red;
+
+    @include from-md {
+      max-width: 70%;
+    }
   }
 }
