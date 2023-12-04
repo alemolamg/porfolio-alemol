@@ -1,8 +1,8 @@
 import Presentation from "../components/presentation";
-import TecnoCard from "@/components/technologies/card";
+import SkillCard from "@/components/technologies/skillCard";
 
 export default function Home() {
-  const technologies = ["python", "kotlin", "sql"];
+  const technologies = ["python", "kotlin", "sql", "java"];
 
   // interface TechnologiesProps {
   //   name: string;
@@ -12,9 +12,9 @@ export default function Home() {
     <main className="flex p-0 min-h-screen flex-col items-center justify-between">
       <Presentation />
 
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-wrap gap-5 justify-around mt-5 bg-yellow-300 w-full">
         {technologies.map((tecnologia, index) => (
-          <TecnoCard key={index} name={tecnologia} />
+          <SkillCard key={index} name={tecnologia} />
         ))}
       </div>
 

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./card.module.scss";
+import styles from "./skillCard.module.scss";
 
-interface TecnologiaProps {
+interface SkillProps {
   name: string;
 }
 
-const TecnoCard: React.FC<TecnologiaProps> = ({ name }) => {
+const SkillCard: React.FC<SkillProps> = ({ name }) => {
   return (
     <div className={styles.container}>
       <h2>{name}</h2>
@@ -14,4 +14,4 @@ const TecnoCard: React.FC<TecnologiaProps> = ({ name }) => {
   );
 };
 
-export default TecnoCard;
+export default SkillCard;
