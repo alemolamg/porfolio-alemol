@@ -1,0 +1,32 @@
+@import "~styles/abstracts";
+
+.skill-container {
+    background-color: aquamarine;
+}
+
+.card {
+  // background-color: rgb(70, 51, 26);
+  border-color: rgb(111, 66, 66);
+  border-width: 0.2rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include from-md {
+    margin: 1rem;
+  }
+
+  .icon {
+    max-width: 80%;
+    color: red;
+  }
+}

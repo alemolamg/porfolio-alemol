@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./skillCard.module.scss";
-import { Skill } from "@/app/page";
+import styles from "./skill.module.scss";
 import Image from "next/image";
+import { Skill } from "./skillsContainer";
 
 interface SkillProps {
   skill: Skill;
@@ -9,7 +9,7 @@ interface SkillProps {
 
 const SkillCard: React.FC<SkillProps> = ({ skill }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.card}>
       {/* <i className={styles.container}> */}
       <Image
         className={styles.icon}
