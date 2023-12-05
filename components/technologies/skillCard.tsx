@@ -10,7 +10,6 @@ interface SkillProps {
 const SkillCard: React.FC<SkillProps> = ({ skill }) => {
   return (
     <div className={styles.card}>
-      {/* <i className={styles.container}> */}
       <Image
         className={styles.icon}
         src={skill.icon}
@@ -19,7 +18,6 @@ const SkillCard: React.FC<SkillProps> = ({ skill }) => {
         height={200}
       />
       <h3 className="uppercase">{skill.name}</h3>
-      {/* </i> */}
     </div>
   );
 };

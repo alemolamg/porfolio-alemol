@@ -5,17 +5,22 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+  transition: transform 0.3s ease-in-out;
 
   @include from-md {
     width: auto;
+  }
+
+  :hover {
+    transform: scale(1.05);
   }
 }
 
 .card {
   --box-size: 5rem;
 
-  border-color: rgb(111, 66, 66);
-  border-width: 0.2rem;
+  border-color: black;
+  border-width: 0.15rem;
   border-radius: 10px;
   margin: 0.5rem;
   padding: 1rem;
@@ -31,6 +36,7 @@
   font-size: 0.7rem;
 
   @include from-md {
+    border-width: 0.25rem;
     margin: 1rem;
     width: auto;
     height: auto;
