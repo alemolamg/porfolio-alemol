@@ -11,13 +11,30 @@
   gap: 2rem;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  // background-color: firebrick;
+}
+
+.imageContainer{
+  // background-color: gold;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+
 }
 
 .image {
   border-radius: 13%;
-  height: 50%;
-  max-width: 150px;
+  height: 30%;
+  width: 30%;
+  // max-width: 12rem;
   margin: 0 0.5rem;
+
+  @include from-md {
+    height: 25%;
+    width: 25%;
+  }
 }
 
 .title {
