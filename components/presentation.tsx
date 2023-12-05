@@ -27,7 +27,7 @@ const Presentation: React.FC = () => {
         />
         {/* </div> */}
       </div>
-      <div className="justify-center bg-blue-800">
+      <div className={styles.description}>
         <h3 className="mx-5 md:mx-16 text-2xl">Descripción profesional </h3>
         <p className="mx-5 md:mx-16 my-5 text-justify">
           Soy un programador de backend con experiencia en diversos sectores y
