@@ -2,6 +2,7 @@ import Presentation from "../components/presentation";
 import SkillCard from "@/components/technologies/skillCard";
 import images from "../public/skill-icons/python_icon.svg"
 import SkillsContainer from "@/components/technologies/skillsContainer";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
 
@@ -91,6 +92,8 @@ export default function Home() {
           </p>
         </a>
       </div> */}
+
+      <Footer/>
     </main>
   );
 }
