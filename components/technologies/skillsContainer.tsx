@@ -13,6 +13,7 @@ const skills: Skill[] = [
   { name: "kotlin", icon: "/skill-icons/Kotlin-Full-Color.svg" },
   { name: "sql", icon: "/skill-icons/kotlin_icon.svg" },
   { name: "java", icon: "/skill-icons/java_icon.svg" },
+  { name: "Git", icon: "/skill-icons/java_icon.svg" },
 ];
 
 const SkillsContainer: React.FC<SkillsProps> = ({}) => {
