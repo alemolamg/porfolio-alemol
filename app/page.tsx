@@ -3,12 +3,15 @@ import SkillCard from "@/components/technologies/skillCard";
 import images from "../public/skill-icons/python_icon.svg"
 import SkillsContainer from "@/components/technologies/skillsContainer";
 import Footer from "@/components/footer/footer";
+import ContainerDescrip from "@/components/descriptComponent/containerDescript";
 
 export default function Home() {
 
   return (
     <main className="flex p-0 flex-col items-center justify-between">
       <Presentation />
+
+      <ContainerDescrip></ContainerDescrip>
 
       <SkillsContainer/> {/* Contiene todas las skills aprendidas */}
 
