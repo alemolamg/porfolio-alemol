@@ -16,7 +16,6 @@
 }
 
 .imageContainer {
-  // background-color: gold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,8 +56,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0.5rem;
+  background-color: #dfdb9a;
+  text-align: justify;
 
-  background-color: #DFDB9A;
-  // background-color: #B5B274;
-  
+  h3 {
+    font-weight: bold;
+  }
 }

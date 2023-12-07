@@ -9,9 +9,10 @@ export default function Home() {
 
   return (
     <main className="flex p-0 flex-col items-center justify-between">
+      
       <Presentation />
 
-      <ContainerDescrip></ContainerDescrip>
+      <ContainerDescrip/>
 
       <SkillsContainer/> {/* Contiene todas las skills aprendidas */}
 

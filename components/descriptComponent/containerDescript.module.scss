@@ -1,12 +1,18 @@
 @import "~styles/abstracts";
 
 .container {
-    background-color: firebrick;
-    width: 100%;
+  background-color: rgb(197, 209, 136);
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: justify;
+
+  @include from-md {
+    padding: 2rem 5rem;
+  }
 }
 
 .title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: purple;
+  font-size: 2rem;
+  font-weight: bold;
+  color: purple;
 }
