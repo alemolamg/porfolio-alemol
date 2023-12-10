@@ -11,6 +11,10 @@ const descriptions: Description[] = [
     title: "Polivalente",
     text: "He trabajado en muchos sectores y de diferentes maneras, por lo que estoy preparado para ",
   },
+  {
+    title: "Trabajo en equipo",
+    text: "Empatia y disposición para colaborar con los compañeros a la hora de trabajar",
+  },
 ];
 
 const ContainerDescrip: React.FC = ({}) => {
