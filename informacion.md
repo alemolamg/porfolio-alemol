@@ -51,6 +51,10 @@ Apoyo informático de la empresa, donde se realizó una auditoría para identifi
 - Reparación de equipos informáticos estropeados o dañados.
 - Sustitución de equipos cuya vida util había llegado a su fin.
 
+### INSTALACIONES ELECTRICAS HINOJOSA Y CRESPILLO SL
+
+Trabajo como instalador eléctrico para 10 pisos. Realizamos la instalación eléctrica de total de los pisos, tanto el cableado de fuerza como la instalación para tener internet en todas las habitaciones.
+
 ## Descripción propia
 
 Soy un apasionado de la tecnología y la informática, he realizado diferentes trabajos en los diversos campos de la informática; me a ayudado a aprender distintas tecnologías y ser versatil a la hora de trabajar.
@@ -66,6 +70,7 @@ Soy un programador de backend con más de dos años de experiencia en el desarro
   He demostrado mi capacidad para trabajar en diferentes sectores y proyectos, utilizando diversos lenguajes y tecnologías. Esto muestra que soy una persona flexible, que aprende rápido y que se adapta a las necesidades y requerimientos de cada situación.
 
 - #### Desarrollo de backend:
+
   Tengo una amplia experiencia en el desarrollo de servicios web y aplicaciones informáticas, utilizando lenguajes como Kotlin, Java, PHP, C++ y Python, y herramientas como Laravel, Docker, Kubernetes, Git y bases de datos SQL y No SQL. Esto muestra que domino los aspectos técnicos y funcionales del desarrollo de backend, y que puedo crear soluciones eficientes, escalables y seguras.
 
 - #### Pasión por la tecnología e informática:
