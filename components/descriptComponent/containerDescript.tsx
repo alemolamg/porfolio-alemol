@@ -21,7 +21,7 @@ const ContainerDescrip: React.FC = ({}) => {
   return (
     <div className={styles.container}>
       {descriptions.map((descript, index) => (
-        <div key={index}>
+        <div key={index} className={styles.data}>
           <h3 className={styles.title}>{descript.title}</h3>
           <p className={styles.text}>{descript.text}</p>
         </div>
