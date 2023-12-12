@@ -10,6 +10,10 @@
   @include from-md {
     padding: 2rem 5rem;
     display: flex;
+    // grid-template-columns: repeat(3, 33%);
+    gap: 2rem;
+    // grid-template-rows: repeat(1,40%);
+    // background-color: purple;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -19,7 +23,8 @@
   margin: 1rem 0;
 
   @include from-md {
-   max-width: 35%;
+   width: 35%;
+   background-color: purple;
   }
 }
 
