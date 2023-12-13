@@ -16,7 +16,7 @@ const Presentation: React.FC = () => {
           src={linkedin_image}
           alt="Descripción de la imagen"
         />
-        <Menku/>
+        <Menku />
       </div>
       <div className={styles.description}>
         <h3 className="mx-5 md:mx-20 text-2xl">Descripción profesional </h3>
