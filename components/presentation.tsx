@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./presentation.module.scss";
+import Menku from "./menu/navMenu";
 
 const Presentation: React.FC = () => {
   const linkedin_image =
@@ -15,6 +16,7 @@ const Presentation: React.FC = () => {
           src={linkedin_image}
           alt="Descripción de la imagen"
         />
+        <Menku/>
       </div>
       <div className={styles.description}>
         <h3 className="mx-5 md:mx-20 text-2xl">Descripción profesional </h3>
