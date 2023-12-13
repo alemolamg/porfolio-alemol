@@ -50,7 +50,17 @@
 }
 
 .socialMedia a {
-  color: white;
+  // color: white;
   text-decoration: none;
   margin-right: 1rem;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon{
+  height: 2rem;
 }

@@ -7,6 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import cx from "clsx";
 import "animate.css";
+import Links from "../utils/links";
 
 const MyComponent: FC = () => {
   const [open, setOpen] = useState(true);
@@ -39,10 +40,7 @@ const MyComponent: FC = () => {
             <li>Contacto</li>
           </ul>
           <div className={styles.socialMedia}>
-            {/* Agrega enlaces a tus redes sociales aquí */}
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <Links iconStyle={styles.icon} />
           </div>
         </div>
       )}
