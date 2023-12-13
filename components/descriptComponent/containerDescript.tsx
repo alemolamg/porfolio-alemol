@@ -12,7 +12,7 @@ const descriptions: Description[] = [
     text: "He trabajado en muchos sectores y de diferentes maneras, por lo que estoy preparado para ",
   },
   {
-    title: "Pasión por la e informática",
+    title: "Informática, mi pasión",
     text: "Me gusta estar al día de las últimas tendencias y novedades en el mundo de la informática y la tecnología, y aprender nuevos conocimientos y habilidades que me permitan mejorar como profesional.",
   },
   {

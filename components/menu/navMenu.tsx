@@ -10,7 +10,7 @@ import "animate.css";
 import Links from "../utils/links";
 
 const MyComponent: FC = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
