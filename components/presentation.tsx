@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./presentation.module.scss";
-import Menku from "./menu/navMenu";
+import Menku from "./navMenu/navMenu";
 
 const Presentation: React.FC = () => {
   const linkedin_image =
