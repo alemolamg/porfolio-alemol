@@ -56,8 +56,12 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0.5rem;
-  background-color: #dfdb9a;
+  background-color: $bg-description;
   text-align: justify;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $bg-color-dark;
+  }
 
   h3 {
     font-weight: bold;

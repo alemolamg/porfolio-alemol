@@ -1,34 +1,29 @@
 // FIRST COLORS - Black
-/*
-$color-primary-lighter: hsl(207, 80%, 50%);
-$color-primary-light: rgb(23, 124, 207);
+
 $color-primary: rgb(23, 124, 207);
-// $color-primary: #002a52;
 $color-primary-darker: #002a52;
-// $color-primary-darker: #002a52;
-$color-primary-desaturated: hsl(211, 40%, 60%);
-
-$color-gray-light: hsl(0, 0%, 93%);
-$color-gray: hsl(0, 0%, 69%);
-$color-gray-dark: hsl(221, 12%, 60%);
-$color-gray-darker: hsl(211, 12%, 52%);
-
-// $bg-color: rgb(15 23 42);
-// $bg-color: #0d1017;
-$bg-color: #f5f4de;
-$footer-bg-color: #333105;
-
-*/
-
-
-// SECOND COLORS - Beige
-$bg-color: #f5f4de;
-$footer-bg-color: #333105;
 $bg-color-dark: hsl(209, 100%, 16%);
 
-$color-primary-lighter: hsl(207, 80%, 50%);
-$color-primary-light: rgb(23, 124, 207);
-$color-primary: rgb(23, 124, 207);
+$color-primary-desaturated: hsl(211, 40%, 60%);
+
+$color-gray-light: hsl(0, 0%, 93%);
+$color-gray: hsl(0, 0%, 69%);
+$color-gray-dark: hsl(221, 12%, 60%);
+$color-gray-darker: hsl(211, 12%, 52%);
+
+// $bg-color: rgb(15 23 42);
+// $bg-color: #0d1017;
+$bg-color: #ffffff;
+$bg-description: #E1E1E1;
+$footer-bg-color: #333105;
+
+
+/*
+// SECOND COLORS - Beige
+$bg-color: #f5f4de;
+$bg-description: rgb(197, 209, 136);
+$footer-bg-color: #333105;
+$bg-color-dark: hsl(209, 100%, 16%);
 // $color-primary: #002a52;
 $color-primary-darker: #002a52;
 // $color-primary-darker: #002a52;
@@ -41,10 +36,7 @@ $color-gray-darker: hsl(211, 12%, 52%);
 
 // $bg-color: rgb(15 23 42);
 // $bg-color: #0d1017;
-$bg-color: #f5f4de;
-$footer-bg-color: #333105;
+// $bg-color: #f5f4de;
+// $footer-bg-color: #333105;
 
-@media (prefers-color-scheme: dark) {
-    $bg-color-dark: #002a52;
-    
-}
+*/
