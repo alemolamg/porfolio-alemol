@@ -24,7 +24,7 @@ const MyComponent: FC = () => {
 
   return (
     <div className={styles.navbar}>
-      <div className={styles.menuIcon} onClick={handleClick}>
+      <div className={styles.menuIcon} onClick={handleClick} style={{ color: open ? 'white' : 'black' }}>
         {iconbutton}
       </div>
       {open && (

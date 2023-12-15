@@ -37,7 +37,6 @@
 }
 
 .title {
-  // background-color: firebrick;
   font-size: 2rem;
   max-width: 50%;
   margin-left: 1rem;
@@ -60,7 +59,7 @@
   text-align: justify;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $bg-color-dark;
+    background-color: $bg-description-dark;
   }
 
   h3 {
