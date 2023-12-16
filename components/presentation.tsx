@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./presentation.module.scss";
 import Menku from "./navMenu/navMenu";
+import clsx from "clsx";
 
 const Presentation: React.FC = () => {
   const linkedin_image =
@@ -20,7 +21,7 @@ const Presentation: React.FC = () => {
       </div>
       <div className={styles.description}>
         <h3 className="mx-5 md:mx-20 text-2xl">Descripción profesional </h3>
-        <p className="mx-5 md:mx-20 my-5">
+        <p className={clsx("mx-5 md:mx-20 my-5")}>
           Soy un programador de backend con experiencia en diversos sectores y
           proyectos, utilizando lenguajes y herramientas como Kotlin, Java, PHP,
           C++, Python, Laravel, Docker, Kubernetes, Git y bases de datos SQL y
