@@ -21,10 +21,9 @@ Lista de lenguajes y tecnologías que conozdo:
 
 ### Clickferry | Octubre 2022 - Noviembre 2023
 
-Durante el trabajo, realicé sobre todo trabajo de backend en el desarrollo de los servicios de las navieras.
-Además trabajé realizando la nueva página web y desarrollo de pequeños servicios complementarios.
+Principalmente realicé los trabajos de backend en el desarrollo mejoras funcionales de los servicios de las navieras. Además complementé trabajos de construcción de la nueva página web y desarrollo de pequeños servicios complementarios.
 
-- Realización de micro servicios con Kotlin.
+- Realización de microservicios con Kotlin.
 - Consumo de información de los proveedores a traves de API Rest y Soap UI.
 - Despliegue de contenedores (Docker) a los servidores de Kubernetes a traves de Helm.
 - Trabajo con repositorios de Git.
@@ -34,7 +33,7 @@ Además trabajé realizando la nueva página web y desarrollo de pequeños servi
 
 ### Carrier | Marzo 2022 - Septiembre 2023
 
-Realización de trabajo oriendatado a soporte IT, trabajo con bases de datos, migración de la estructura de servidores internos a servicios en la nube (Cloud) y programando pequeñas soluciones con Java.
+Ejecución de trabajos orientados a soporte it, trabajo con bases de datos, migración de la estructura de servidores internos a servicios en la nube (cloud) y programación de diversas soluciones con java.
 
 - Soporte IT para trabajadores de oficina y fábrica.
 - Migración de la estructura interna de archivos a servicios en la nube basada en Microsoft.
@@ -44,9 +43,9 @@ Realización de trabajo oriendatado a soporte IT, trabajo con bases de datos, mi
 
 ### Construcciones y Contratas Cabello | Mayo 2021 - Marzo 2022
 
-Apoyo informático de la empresa, donde se realizó una auditoría para identificar los problemas de los distintos procesos de trabajo y se hizo un análisis completo de los equipos de los trabajadores. Las acciones realizadas a partir de la auditoría fueron:
+Apoyo informático de la empresa, donde realizando una auditoría para identificar los problemas de los distintos procesos de trabajo y haciendo un análisis completo de los equipos de los trabajadores. las acciones realizadas a partir de la auditoría fueron:
 
-- Migración y enseñanza con el trabajo en la nube, solucionando problemas de archivos compartidos y mejorando la facilidad para trabajar con los archivos compartidos, evitando la pérdida de información y aumentando la seguridad a la hora de manejar información sensible.
+- Migración y enseñanza con el trabajo en la nube, solucionando problemas de archivos compartidos y mejorando la funcionalidad para trabajar con los archivos compartidos, evitando la pérdida de información y aumentando la seguridad a la hora de manejar información sensible.
 - Cambio del ERP empresarial, eligiendo y configurando el adecuado para la actividad de la empresa; en este caso una constructora.
 - Reparación de equipos informáticos estropeados o dañados.
 - Sustitución de equipos cuya vida util había llegado a su fin.
