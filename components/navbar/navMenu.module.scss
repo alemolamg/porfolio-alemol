@@ -1,14 +1,14 @@
 @import "~styles/abstracts";
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0.75rem;
-  // background-color: goldenrod;
+  justify-content: right;
+  padding: 0.5rem 1rem;
+  background-color: goldenrod;
   // color: white;
 }
 
