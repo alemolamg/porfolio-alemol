@@ -33,8 +33,9 @@
   align-items: center;
   justify-content: center;
   width: var(--box-size);
-  height: 5.5rem ;
+  height: 5.5rem;
   font-size: 0.7rem;
+  color: black;
 
   @include from-md {
     border-width: 0.25rem;
@@ -48,7 +49,6 @@
 
   .icon {
     max-width: 75%;
-    color: red;
 
     @include from-md {
       max-width: 70%;
