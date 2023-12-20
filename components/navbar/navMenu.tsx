@@ -10,10 +10,11 @@ import "animate.css";
 import Links from "../utils/links";
 
 const MyComponent: FC = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
 
   const handleClick = () => {
     setOpen(!open);
+
   };
 
   const iconbutton = !open ? (
@@ -24,26 +25,45 @@ const MyComponent: FC = () => {
 
   return (
     <div className={styles.navbar}>
-      <div className={styles.menuIcon} onClick={handleClick} style={{ color: open ? 'white' : 'black' }}>
+      <div
+        className={styles.menuIcon}
+        onClick={handleClick}
+        style={{ color: open ? "white" : "black" }}
+      >
         {iconbutton}
       </div>
       {open && (
         <div
           className={cx(
             styles.menuPanel,
-            "animate__animated animate__fadeInRight"
+            "animate__animated ", open ? "animate__fadeInRight" : " animate__fadeOutRight"
           )}
         >
-          <ul>
+          {/* <ul>
             <li>Inicio</li>
             <li>Acerca de</li>
             <li>Contacto</li>
-          </ul>
+          </ul> */}
           <div className={styles.socialMedia}>
+            <p>enlaces:</p>
             <Links iconStyle={styles.icon} />
           </div>
         </div>
       )}
+      {/* {!open && (
+        <div
+          className={cx(
+            styles.menuPanel,
+            "animate__animated animate__fadeOutRight"
+          )}
+        >
+          <div className={styles.socialMedia}>
+            <p>enlaces:</p>
+            <Links iconStyle={styles.icon} />
+          </div>
+        </div>
+      )} */}
+
     </div>
   );
 };
