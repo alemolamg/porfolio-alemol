@@ -1,18 +1,21 @@
 import SkillCard from "./skillCard";
 import styles from "./skill.module.scss";
+import { IconDefinition, faPhp } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 interface SkillsProps {}
 
 export interface Skill {
   name: string;
-  icon: string;
+  icon: string | IconDefinition;
 }
 
 const skills: Skill[] = [
-  { name: "python", icon: "/skill-icons/python_icon.svg" },
   { name: "kotlin", icon: "/skill-icons/Kotlin-Full-Color.svg" },
-  { name: "sql", icon: "/skill-icons/kotlin_icon.svg" },
   { name: "java", icon: "/skill-icons/java_icon.svg" },
+  { name: "PHP", icon: faPhp },
+  { name: "python", icon: "/skill-icons/python_icon.svg" },
+  { name: "sql", icon: faDatabase },
   { name: "Git", icon: "/skill-icons/java_icon.svg" },
 ];
 

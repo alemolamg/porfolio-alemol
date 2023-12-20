@@ -49,9 +49,17 @@
 
   .icon {
     max-width: 75%;
+    // width: 3rem;
+    // background-color: gold;
 
     @include from-md {
       max-width: 70%;
     }
+  }
+
+  .iconFA{
+    min-width: 3rem;
+    min-height: 3rem;
+    // background-color: firebrick;
   }
 }
