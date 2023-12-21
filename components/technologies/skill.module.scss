@@ -1,12 +1,23 @@
 @import "~styles/abstracts";
 
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+
 .skillContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+  max-width: 70%;
   transition: transform 0.3s ease-in-out;
-  background-color: white;
 
   @include from-md {
     width: auto;
@@ -36,6 +47,7 @@
   height: 5.5rem;
   font-size: 0.7rem;
   color: black;
+  background-color: gold;
 
   @include from-md {
     border-width: 0.25rem;
@@ -48,7 +60,6 @@
   .icon {
     max-width: 75%;
     // width: 3rem;
-    // background-color: gold;
 
     @include from-md {
       max-width: 70%;
@@ -58,8 +69,7 @@
   .iconFA{
     max-width: 75%;
     max-height: 75%;
-    // min-width: 75%;
-    min-height: 3.5rem;
-    // backgroundn-color: firebrick;
+    min-width: 75%;
+    min-height: 2.75rem;
   }
 }

@@ -25,7 +25,7 @@ const skills: Skill[] = [
 
 const SkillsContainer: React.FC<SkillsProps> = ({}) => {
   return (
-    <div className="w-full md:w-auto py-5 bg-white">
+    <div className={styles.container}>
       <h2 className="flex justify-center mb-5 text-xl">
         Tecnologías con las que trabajo
       </h2>
