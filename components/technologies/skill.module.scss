@@ -16,11 +16,12 @@
   align-items: center;
   justify-content: center;
   
-  max-width: 70%;
+  max-width: 100%;
   transition: transform 0.3s ease-in-out;
 
   @include from-md {
     width: auto;
+    max-width: 70%;
   }
 
   :hover {
