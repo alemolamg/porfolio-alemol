@@ -17,7 +17,7 @@ export interface LinkIcons {
 const linkList: LinkIcons[] = [
   { enlace: "https://www.linkedin.com/in/alemolamg/", icon: faLinkedin },
   { enlace: "https://github.com/alemolamg", icon: faGithub },
-  { enlace: "https://x.com/alemolamg", icon: faXTwitter },
+  // { enlace: "https://x.com/alemolamg", icon: faXTwitter },
 ];
 
 interface LinkIconsProps {

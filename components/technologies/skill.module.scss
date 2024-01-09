@@ -55,10 +55,11 @@
 
   .icon {
     max-width: 75%;
-    // width: 3rem;
+    aspect-ratio: 2rem;
+    object-fit: contain;
 
     @include from-md {
-      max-width: 70%;
+      max-width: 65%;
     }
   }
 
