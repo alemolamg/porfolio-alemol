@@ -7,7 +7,7 @@
 
 .head {
   display: flex;
-  padding: 1rem 2rem 2rem 2rem ;
+  padding: 1rem 2rem 2rem 2rem;
   gap: 2rem;
   flex-direction: row;
   justify-content: space-around;
@@ -36,16 +36,46 @@
   }
 }
 
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.downloadButton {
+  border: 2px solid;
+  border-radius: 0.5rem;
+  border-color: black;
+  padding: 0.3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.icon {
+  height: 1rem;
+  margin: 0.5rem;
+
+  @include from-md {
+    height: 2rem;
+    margin: 0.5rem;
+  }
+}
+
 .title {
   font-size: 2rem;
-  max-width: 50%;
+  // max-width: 50%;
   margin-left: 1rem;
   font-weight: bold;
+  // background-color: firebrick;
 
   @include from-md {
     display: flex;
     font-size: 3rem;
-    max-width: 25%;
+    max-width: 70%;
     justify-content: center;
   }
 }

@@ -39,30 +39,18 @@ const MyComponent: FC = () => {
             "animate__animated ", open ? "animate__fadeInRight" : " animate__fadeOutRight"
           )}
         >
-          {/* <ul>
-            <li>Inicio</li>
-            <li>Acerca de</li>
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="#description">Acerca de mi </a></li>
+            <li><a href="#skills">Conocimientos</a></li>
             <li>Contacto</li>
-          </ul> */}
+          </ul>
           <div className={styles.socialMedia}>
             <p>enlaces:</p>
             <Links iconStyle={styles.icon} />
           </div>
         </div>
       )}
-      {/* {!open && (
-        <div
-          className={cx(
-            styles.menuPanel,
-            "animate__animated animate__fadeOutRight"
-          )}
-        >
-          <div className={styles.socialMedia}>
-            <p>enlaces:</p>
-            <Links iconStyle={styles.icon} />
-          </div>
-        </div>
-      )} */}
 
     </div>
   );
