@@ -4,12 +4,9 @@ import styles from "./presentation.module.scss";
 import NavBar from "@/components/navbar/navBar";
 import clsx from "clsx";
 import LinkIcons from "./utils/links";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import DownloadButton from "./utils/downloadPDF";
 
 const Presentation: React.FC = () => {
-  const curriculum_route = "/public/Curriculum_AlejandroMolero2023.pdf";
-
   const linkedin_image =
     "https://media.licdn.com/dms/image/C4E03AQFyWz4Hfu6YWQ/profile-displayphoto-shrink_800_800/0/1656794215383?e=1707350400&v=beta&t=OF2GgRv26NwArHiAq-8VoarPhKxSBTcT7ug62HBcHEY";
   // const imageURL = "/imagenAlemol.jpeg";
@@ -23,14 +20,7 @@ const Presentation: React.FC = () => {
           {/* </div> */}
           <div className={styles.subtitle}>
             <LinkIcons iconStyle={styles.icon} />
-            <a
-              href={curriculum_route}
-              download
-              className={styles.downloadButton}
-            >
-              <FontAwesomeIcon className={styles.icon} icon={faFileArrowDown} />
-              <button>Descargar Currículum</button>
-            </a>
+            <DownloadButton />
           </div>
         </div>
 
