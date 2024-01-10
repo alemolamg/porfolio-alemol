@@ -31,15 +31,21 @@ const Presentation: React.FC = () => {
         />
       </div>
       <div className={styles.description} id="description">
-        <h3 className="mx-5 md:mx-20 text-2xl">Descripción profesional </h3>
-        <p className={clsx("mx-5 md:mx-20 my-5")}>
-          Soy un programador de backend con experiencia en diversos sectores y
-          proyectos, utilizando lenguajes y herramientas como Kotlin, Java, PHP,
-          C++, Python, Laravel, Docker, Kubernetes, Git y bases de datos SQL y
-          No SQL. Me adapto a diferentes entornos y tecnologías, y me gusta
-          aprender y mejorar como profesional. Mi objetivo es seguir creciendo y
-          aportando valor en el desarrollo web y la programación.
-        </p>
+        <div>
+          <h3 className="mx-5 md:mx-20 text-2xl">Descripción profesional </h3>
+          <p className={clsx("mx-5 md:mx-20 my-5")}>
+            Soy un programador de backend con experiencia en diversos sectores y
+            proyectos, utilizando lenguajes y herramientas como Kotlin, Java,
+            PHP, C++, Python, Laravel, Docker, Kubernetes, Git y bases de datos
+            SQL y No SQL.
+          {/* </p> */}
+          {/* <p className={clsx("mx-5 md:mx-20 my-5")}> */}
+            Me adapto a diferentes entornos y tecnologías, y me gusta aprender y
+            mejorar como profesional. Mi objetivo es seguir creciendo y
+            aportando valor en el desarrollo web y la programación.
+          </p>
+        </div>
+        <img src="/gifs/codificacion.gif" alt="Animacion" className={styles.imageDesc} />
       </div>
     </div>
   );

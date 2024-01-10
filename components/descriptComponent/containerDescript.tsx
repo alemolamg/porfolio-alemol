@@ -9,7 +9,7 @@ interface Description {
 const descriptions: Description[] = [
   {
     title: "Polivalente",
-    text: "He trabajado en muchos sectores y de diferentes maneras, por lo que estoy preparado para ",
+    text: "He demostrado mi capacidad para trabajar en diferentes sectores y proyectos, utilizando diversos lenguajes y tecnologías. Esto muestra que soy una persona flexible, que aprende rápido y que se adapta a las necesidades y requerimientos de cada situación.",
   },
   {
     title: "Informática, mi pasión",
