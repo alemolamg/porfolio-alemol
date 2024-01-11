@@ -6,7 +6,7 @@ import ScrollToTopButton from "./topButton";
 const Footer: React.FC = () => {
   const myEmail = "hello@alemolamg.com";
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       {/* <div>Contenido de Alemol</div> */}
       <div>
         {/* <h4>@Alemol AMG</h4> */}
