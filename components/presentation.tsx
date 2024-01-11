@@ -19,8 +19,8 @@ const Presentation: React.FC = () => {
           <h1 className={styles.title}>Alejandro Molero Gómez</h1>
           {/* </div> */}
           <div className={styles.subtitle}>
-            <LinkIcons iconStyle={styles.icon} />
             <DownloadButton />
+            <LinkIcons iconStyle={styles.icon} />
           </div>
         </div>
 
