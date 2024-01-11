@@ -37,13 +37,13 @@ const Presentation: React.FC = () => {
             Soy un programador de backend con experiencia en diversos sectores y
             proyectos, utilizando lenguajes y herramientas como Kotlin, Java,
             PHP, C++, Python, Laravel, Docker, Kubernetes, Git y bases de datos
-            SQL y No SQL.
-          {/* </p> */}
-          {/* <p className={clsx("mx-5 md:mx-20 my-5")}> */}
+            SQL y No SQL. 
             Me adapto a diferentes entornos y tecnologías, y me gusta aprender y
             mejorar como profesional. Mi objetivo es seguir creciendo y
             aportando valor en el desarrollo web y la programación.
           </p>
+          {/* </p> */}
+          {/* <p className={clsx("mx-5 md:mx-20 my-5")}> */}
         </div>
         <img src="/gifs/codificacion.gif" alt="Animacion" className={styles.imageDesc} />
       </div>

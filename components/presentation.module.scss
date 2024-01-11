@@ -56,21 +56,18 @@
 }
 
 .icon {
-  height: 1rem;
-  margin: 0.5rem;
+  min-height: 1rem;
 
   @include from-md {
-    height: 2rem;
+    min-height: 2rem;
     margin: 0.5rem;
   }
 }
 
 .title {
   font-size: 2rem;
-  // max-width: 50%;
   margin-left: 1rem;
   font-weight: bold;
-  // background-color: firebrick;
 
   @include from-md {
     display: flex;
