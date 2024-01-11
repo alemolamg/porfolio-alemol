@@ -2,17 +2,13 @@
 
 .navbar {
   position: sticky;
-  top: 0;
-  right: 0.5rem;
   display: flex;
-  padding: 0.5rem 1rem 0 1rem;
-  align-items: center;
+  flex-direction: column;
   justify-content: right;
-  // background-color: goldenrod;
-  // color: white;
 
   @include from-md {
-    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
   }
 }
 

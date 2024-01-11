@@ -1,0 +1,10 @@
+@import "~styles/abstracts";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 2rem;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: right;
+}
