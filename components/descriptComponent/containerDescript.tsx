@@ -15,10 +15,10 @@ const descriptions: Description[] = [
     title: "Informática, mi pasión",
     text: "Me gusta estar al día de las últimas tendencias y novedades en el mundo de la informática y la tecnología, y aprender nuevos conocimientos y habilidades que me permitan mejorar como profesional.",
   },
-  {
-    title: "Trabajo en equipo",
-    text: "Empatia y disposición para colaborar con los compañeros a la hora de trabajar",
-  },
+  // {
+  //   title: "Trabajo en equipo",
+  //   text: "Empatia y disposición para colaborar con los compañeros a la hora de trabajar.",
+  // },
 ];
 
 const ContainerDescrip: React.FC = ({}) => {
