@@ -1,7 +1,7 @@
 import SkillCard from "./skillCard";
 import styles from "./skill.module.scss";
 import { IconDefinition, faAngular, faDocker, faGit, faJava, faPhp, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faCubes, faDatabase, faNetworkWired } from "@fortawesome/free-solid-svg-icons";
+import { faComputer, faCubes, faDatabase, faNetworkWired } from "@fortawesome/free-solid-svg-icons";
 
 interface SkillsProps {}
 
@@ -22,6 +22,7 @@ const skills: Skill[] = [
   { name: "react", icon: faReact },
   { name: "Git", icon: faGit },
   { name: "Redes", icon: faNetworkWired },
+  { name: "Soporte", icon: faComputer },
 ];
 
 const SkillsContainer: React.FC<SkillsProps> = ({}) => {
