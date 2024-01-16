@@ -7,20 +7,21 @@ const Footer: React.FC = () => {
   const myEmail = "hello@alemolamg.com";
   return (
     <footer className={styles.footer} id="footer">
-      {/* <div>Contenido de Alemol</div> */}
-      <div>
-        {/* <h4>@Alemol AMG</h4> */}
-        <p>
-          <a href={`mailto:${myEmail}`}>{myEmail}</a>
-        </p>
+      <div className={styles.container}>
+        <div>
+          {/* <h4>@Alemol AMG</h4> */}
+          <p>
+            <a href={`mailto:${myEmail}`}>{myEmail}</a>
+          </p>
+        </div>
+        <div>
+          enlaces:
+          <LinkIcons containerStyle={styles.links} iconStyle={styles.icon} />
+        </div>
       </div>
-      <div>
-        enlaces:
-        <LinkIcons containerStyle={styles.links} iconStyle={styles.icon} />
-      </div>
-      <div>
-        <ScrollToTopButton />
-      </div>
+
+      {/* Botón de subir */}
+        <ScrollToTopButton iconStyle={styles.icon} containerStyle={styles.topButton} />
     </footer>
   );
 };

@@ -6,7 +6,6 @@ import {
   IconDefinition,
   faGithub,
   faLinkedin,
-  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 export interface LinkIcons {

@@ -1,10 +1,16 @@
 "use client";
 import cx from "clsx";
-import styles from "./footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowUp, faSquareCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FC } from "react";
 
-const ScrollToTopButton = () => {
+interface ScrollToTopButtonProps {
+  iconStyle?: string;
+  containerStyle?: string;
+}
+
+
+const ScrollToTopButton: FC<ScrollToTopButtonProps> = (props) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,8 +19,8 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <button onClick={scrollToTop}>
-      <FontAwesomeIcon className={cx(styles.icon)} icon={faCircleArrowUp} />
+    <button className={props.containerStyle} onClick={scrollToTop}>
+      <FontAwesomeIcon className={cx(props.iconStyle)} icon={faCircleArrowUp} />
     </button>
   );
 };
