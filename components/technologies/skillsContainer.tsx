@@ -29,7 +29,7 @@ const SkillsContainer: React.FC<SkillsProps> = ({}) => {
   return (
     <div className={styles.container} id="skills">
       <h2 className="flex justify-center mb-5 text-xl">
-        Tecnologías con las que trabajo
+      STACK TECNOLÓGICO
       </h2>
       <div className={styles.skillContainer}>
         {skills.map((tecnologia, index) => (
