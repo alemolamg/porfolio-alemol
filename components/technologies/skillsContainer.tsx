@@ -23,6 +23,7 @@ const skills: Skill[] = [
   { name: "Git", icon: faGit },
   { name: "Redes", icon: faNetworkWired },
   { name: "Soporte", icon: faComputer },
+  // { name: "Gradle", icon: fagra}
 ];
 
 const SkillsContainer: React.FC<SkillsProps> = ({}) => {

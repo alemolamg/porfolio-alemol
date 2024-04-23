@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
 import styles from "./navMenu.module.scss";
-import NavMenu from "./navMenu";
 import "animate.css";
 import StaticNav from "./staticNavbar";
 
