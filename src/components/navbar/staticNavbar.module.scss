@@ -1,0 +1,23 @@
+@import "@/styles/abstracts";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: right;
+  // max-width: 95%;
+  
+  @include from-md {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    max-width: auto;
+    gap: 2rem;
+  }
+  
+  a {
+    font-size: 0.75 rem;
+    white-space: nowrap;
+  }
+}

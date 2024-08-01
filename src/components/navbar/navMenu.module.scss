@@ -1,0 +1,66 @@
+@import "@/styles/abstracts";
+
+.navbar {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+
+  @include from-md {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  // background-color: goldenrod;
+}
+
+.menuPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; /* Cambia según tus necesidades */
+  background-color: $bg-menu;
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include from-md {
+    top: 0;
+    left: 70%;
+    height: 100%;
+    width: 30%;
+  }
+}
+
+.menuPanel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuPanel li {
+  margin-bottom: 1rem;
+}
+
+.socialMedia a {
+  // color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 2rem;
+}

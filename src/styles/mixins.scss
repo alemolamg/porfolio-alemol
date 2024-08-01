@@ -1,0 +1,65 @@
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-2xl: 1536px;
+
+@mixin up-to-sm {
+  @media screen and (max-width: calc($screen-sm - 1px)) {
+    @content;
+  }
+}
+
+@mixin from-sm {
+  @media screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin up-to-md {
+  @media screen and (max-width: calc($screen-md - 1px)) {
+    @content;
+  }
+}
+
+@mixin for-md {
+  @media screen and (min-width: $screen-md) and (max-width: calc($screen-md - 1px)) {
+    @content;
+  }
+}
+
+@mixin from-md {
+  @media screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin up-to-lg {
+  @media screen and (max-width: calc($screen-lg - 1px)) {
+    @content;
+  }
+}
+
+@mixin for-lg {
+  @media screen and (min-width: $screen-lg) and (max-width: calc($screen-xl - 1px)) {
+    @content;
+  }
+}
+
+@mixin from-lg {
+  @media screen and (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin from-xl {
+  @media screen and (min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin from-2xl {
+  @media screen and (min-width: $screen-2xl) {
+    @content;
+  }
+}

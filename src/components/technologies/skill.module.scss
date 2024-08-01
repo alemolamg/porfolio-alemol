@@ -1,0 +1,72 @@
+@import "@/styles/abstracts";
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+
+.skillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out;
+
+  @include from-lg {
+    width: auto;
+    max-width: 85%;
+  }
+}
+
+.card {
+  --box-size: 5rem;
+
+  border-color: black;
+  border-width: 0.15rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--box-size);
+  height: 5.5rem;
+  font-size: 0.7rem;
+  color: black;
+
+  @include from-md {
+    border-width: 0.25rem;
+    margin: 1rem;
+    width: 8rem;
+    height: 8rem;
+    font-size: 1rem;
+  }
+
+  .icon {
+    max-width: 75%;
+    aspect-ratio: 2rem;
+    object-fit: contain;
+
+    @include from-md {
+      max-width: 65%;
+    }
+  }
+
+  .iconFA{
+    max-width: 75%;
+    max-height: 75%;
+    min-width: 75%;
+    min-height: 2.75rem;
+  }
+}

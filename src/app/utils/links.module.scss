@@ -1,0 +1,17 @@
+@import "@/styles/abstracts";
+
+.links {
+  display: flex;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  gap: 1rem;
+  align-items: center;
+  
+  @include from-md{
+    gap: 1rem;
+  }
+}
+
+.icon {
+  height: 1rem;
+}
