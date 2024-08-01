@@ -9,8 +9,11 @@
   :root {
     background-color: $bg-color-dark;
     color: white;
-    //     --foreground-rgb: 255, 255, 255;
-    //     --background-start-rgb: 0, 0, 0;
-    //     --background-end-rgb: 0, 0, 0;
   }
+}
+
+a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
 }

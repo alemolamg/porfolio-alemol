@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div>
           {/* <h4>@Alemol AMG</h4> */}
           <p>
-            <a href={`mailto:${myEmail}`}>{myEmail}</a>
+            <a className={styles.mail} href={`mailto:${myEmail}`}>{myEmail}</a>
           </p>
         </div>
         <div>
