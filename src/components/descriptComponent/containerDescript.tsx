@@ -1,4 +1,3 @@
-// imports
 import styles from "./containerDescript.module.scss";
 
 interface Description {
@@ -21,7 +20,7 @@ const descriptions: Description[] = [
   // },
 ];
 
-const ContainerDescrip: React.FC = ({}) => {
+const ContainerDescrip: React.FC = ({ }) => {
   return (
     <div className={styles.container}>
       {descriptions.map((descript, index) => (
