@@ -8,7 +8,7 @@ import DownloadButton from "../app/utils/downloadPDF";
 
 const Presentation: React.FC = () => {
   const linkedin_image =
-    "https://media.licdn.com/dms/image/C4E03AQFyWz4Hfu6YWQ/profile-displayphoto-shrink_800_800/0/1656794215383?e=1707350400&v=beta&t=OF2GgRv26NwArHiAq-8VoarPhKxSBTcT7ug62HBcHEY";
+    "https://media.licdn.com/dms/image/D4D03AQHZ1f4ldpgxYA/profile-displayphoto-shrink_800_800/0/1707758175616?e=1727913600&v=beta&t=DiC4jek8WzdMyiYvpOVsKV9EFkCPabdRHnm5d6b8AfQ";
   // const imageURL = "/imagenAlemol.jpeg";
   return (
     <div className={styles.container}>

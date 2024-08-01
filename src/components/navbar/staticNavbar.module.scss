@@ -7,17 +7,21 @@
   gap: 1rem;
   align-items: center;
   justify-content: right;
-  // max-width: 95%;
-  
+  list-style: none; // Quita los puntos de la lista
+  margin: 0; // Elimina cualquier margen predeterminado
+  padding: 0; // Elimina cualquier padding predeterminado
+
   @include from-md {
     padding: 0.5rem 2rem;
     font-size: 1.2rem;
     max-width: auto;
     gap: 2rem;
   }
-  
+
   a {
-    font-size: 0.75 rem;
+    font-size: 1.25rem; 
     white-space: nowrap;
+    text-decoration: none; 
+    color: black;
   }
 }
