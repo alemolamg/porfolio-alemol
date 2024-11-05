@@ -7,8 +7,9 @@ import LinkIcons from "../app/utils/links";
 import DownloadButton from "../app/utils/downloadPDF";
 
 const Presentation: React.FC = () => {
+  // IMAGEN DE LINKEDIN
   const linkedin_image =
-    "https://media.licdn.com/dms/image/D4D03AQHZ1f4ldpgxYA/profile-displayphoto-shrink_800_800/0/1707758175616?e=1727913600&v=beta&t=DiC4jek8WzdMyiYvpOVsKV9EFkCPabdRHnm5d6b8AfQ";
+    "https://media.licdn.com/dms/image/v2/D4D03AQHZ1f4ldpgxYA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707758175616?e=1736380800&v=beta&t=LxcZynqFoGkYYQByDeHCfoQgjVM94sIL_D0n6IA0QSs";
   // const imageURL = "/imagenAlemol.jpeg";
   return (
     <div className={styles.container}>
