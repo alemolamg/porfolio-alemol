@@ -6,22 +6,29 @@
   padding: 0.5rem 1rem;
   gap: 1rem;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   list-style: none; // Quita los puntos de la lista
   margin: 0; // Elimina cualquier margen predeterminado
   padding: 0; // Elimina cualquier padding predeterminado
 
   @include from-md {
+    justify-content: right;
     padding: 0.5rem 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: auto;
     gap: 2rem;
   }
 
   a {
-    font-size: 1.25rem; 
+    font-size: 0.85rem;
     white-space: nowrap;
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
+
+    @include from-md {
+      padding: 0 0.5rem;
+      font-size: 1.25rem;
+      max-width: auto;
+    }
   }
 }
