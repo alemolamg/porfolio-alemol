@@ -10,7 +10,7 @@ const Presentation: React.FC = () => {
   // IMAGEN DE LINKEDIN
   const linkedin_image =
     "https://media.licdn.com/dms/image/v2/D4D03AQHZ1f4ldpgxYA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707758175616?e=1743638400&v=beta&t=ah4DYzF1o1vLFlh2JJZ11F7Yz3JrCF7c_3XGMunu8u0";
-  // const imageURL = "/imagenAlemol.jpeg";
+  const imageURL = "/image_alemol.jpg"; // Ruta de la imagen
   return (
     <div className={styles.container}>
       <NavBar />
@@ -27,7 +27,8 @@ const Presentation: React.FC = () => {
 
         <img
           className={styles.image}
-          src={linkedin_image}
+          // src={linkedin_image}
+          src={imageURL}
           alt="Descripción de la imagen"
         />
       </div>
