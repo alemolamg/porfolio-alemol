@@ -6,11 +6,11 @@ import ContainerDescrip from "@/components/descriptComponent/containerDescript";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main id="main" className={styles.main}>
       <Presentation />
-      <ContainerDescrip />
-      <SkillsContainer /> {/* Contiene todas las skills aprendidas */}
-      <Footer />
+      {/* <ContainerDescrip /> */}
+      {/* <SkillsContainer />
+      <Footer /> */}
     </main>
   );
 }

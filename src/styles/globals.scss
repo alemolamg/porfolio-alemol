@@ -1,20 +1,89 @@
-@import "./colors.scss";
+/* ===========================
+   GLOBALS CONSOLIDADO
+   (colores + base + breakpoints)
+   =========================== */
 
-// Aquí se cambia los colores del fondo
+/* Variables CSS (tema claro/oscuro) */
 :root {
-  background-color: $bg-color;
-  margin: 0rem -0.5rem;
+  --bg: #306b9c; /* antes: $bg-color */
+  --bg-dark: hsl(209 100% 16%); /* antes: $bg-color-dark */
+  --text: #0b0c0f;
+  --text-dark: #fff;
+
+  --primary: #177ccf; /* $color-primary */
+  --primary-darker: #002a52;
+  --primary-desat: hsl(211 40% 60%);
+
+  --gray-100: hsl(0 0% 93%);
+  --gray-300: hsl(0 0% 69%);
+  --gray-500: hsl(221 12% 60%);
+  --gray-600: hsl(211 12% 52%);
+
+  --menu-bg: hsl(221 12% 60%);
+  --desc-bg: #e1e1e1; /* $bg-description */
+  --desc-bg-dark: #0e1116; /* $bg-description-dark */
+  --desc-small: #333;
+  --footer-bg: #292f33;
+
+  --radius: 20px;
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --max-width: 1100px;
+
+  /* Breakpoints (usa directamente en @media) */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: $bg-color-dark;
-    color: white;
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
   }
 }
 
+/* Base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 a {
-  white-space: nowrap;
+  color: inherit;
   text-decoration: none;
-  color: black;
+}
+
+/* Accesibilidad */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: #ffd;
+  outline: 2px solid #333;
+  margin: 0.5rem;
 }

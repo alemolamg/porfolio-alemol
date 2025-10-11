@@ -1,28 +1,36 @@
-@import "@/styles/abstracts";
+/* sin imports: usa variables globales y media queries directas */
 
 .downloadButton {
-    border: 2px solid;
-    border-radius: 0.5rem;
-    border-color: black;
-    padding: 0.3rem;
-  
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    
-    p{
-      margin-right: 0.25rem;
-    }
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.5rem;
+  background: transparent;
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+
+  p {
+    margin-right: 0.25rem;
   }
-  
-  .icon {
-    height: 1.25rem;
-    margin: 0.25rem;
-  
-    @include from-md {
-      height: 2rem;
-      margin: 0.5rem;
-    }
+
+  &:hover {
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
   }
+}
+
+.icon {
+  height: 1.25rem;
+  margin: 0.25rem;
+
+  @media (min-width: 768px) {
+    height: 2rem;
+    margin: 0.5rem;
+  }
+}
   

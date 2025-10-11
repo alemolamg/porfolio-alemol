@@ -1,0 +1,103 @@
+/* Navbar estilos: mobile-first, sin imports, usando variables CSS globales */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  background: color-mix(in oklab, var(--bg) 86%, white 14%);
+  backdrop-filter: saturate(1.1) blur(6px);
+}
+
+/* Botón hamburguesa (visible en móvil) */
+.menuIcon {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  padding: .4rem .6rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 60; /* por encima del panel */
+  box-shadow: var(--shadow-1);
+}
+
+/* Lista inline solo en desktop */
+.inlineList {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inlineList li { margin: 0; }
+.inlineList a {
+  display: inline-block;
+  padding: .35rem .5rem;
+  font-size: .95rem;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .menuIcon { display: none; }
+  .inlineList {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+  }
+}
+
+/* Panel móvil (overlay). En desktop lo mostramos como panel lateral derecho */
+.menuPanel {
+  position: fixed;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 4rem 2rem 2rem;
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.35)
+  );
+  backdrop-filter: blur(6px) saturate(1.1);
+}
+
+.menuPanel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuPanel li { margin-bottom: 1rem; }
+.menuPanel a { color: white; text-decoration: none; font-size: 1.1rem; }
+
+/* Área para redes u otros enlaces */
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto; /* empuja al final */
+}
+
+.icon { height: 2rem; }
+
+/* En desktop, el panel se convierte en sidebar a la derecha */
+@media (min-width: 768px) {
+  .menuPanel {
+    left: auto;
+    width: 320px;
+    background: var(--menu-bg);
+    color: #fff;
+    padding: 3rem 1.5rem;
+  }
+}
