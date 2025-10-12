@@ -78,3 +78,30 @@
     padding: 2.5rem;
   }
 }
+
+/* ===== Scroll reveal estilo "Apple" (fade + slide + stagger) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respeta la preferencia del usuario */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .revealVisible {
+    opacity: 1;
+    transform: none;
+  }
+}

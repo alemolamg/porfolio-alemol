@@ -87,3 +87,27 @@ a {
   outline: 2px solid #333;
   margin: 0.5rem;
 }
+
+/* ==== Utilidades reveal (fade + slide + stagger) ==== */
+.u-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+.u-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .u-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .u-reveal--visible {
+    opacity: 1;
+    transform: none;
+  }
+}

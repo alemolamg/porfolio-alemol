@@ -1,6 +1,6 @@
 {
   "name": "porfolio-alemol-new",
-  "version": "0.3.0 - A",
+  "version": "0.3.0 - B",
   "private": true,
   "scripts": {
     "dev": "next dev",
