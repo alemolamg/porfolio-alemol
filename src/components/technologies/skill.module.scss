@@ -1,72 +1,167 @@
-@import "@/styles/abstracts";
+/* sin imports; usa variables de globals y media queries nativas */
 
-
-.container{
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
+/* Sección completa */
+.container {
   width: 100%;
-  background-color: white;
-  align-items: center;
+  background: var(--desc-bg);
+  @media (prefers-color-scheme: dark) {
+    background: var(--desc-bg-dark);
+  }
+
+  /* más compacto en mobile + safe area */
+  padding-block: 1.25rem 2rem;
+  padding-inline: max(0.75rem, env(safe-area-inset-left))
+    max(0.75rem, env(safe-area-inset-right));
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+
+  /* evita scroll horizontal sin recortar texto en Safari */
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-.skillContainer {
+.sectionTitle {
+  font-weight: 800;
+  font-size: clamp(1.15rem, 4.2vw, 1.75rem);
+  color: var(--primary);
+  text-align: center;
+
+  /* ocupa todo el ancho y separa de bordes */
+  display: block;
+  width: 100%;
+  padding-inline: clamp(10px, 4vw, 24px);
+  margin: 0 auto;
+
+  /* protección extra */
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  @media (min-width: 768px) {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+  }
+}
+
+/* Contenedor con flex-wrap para XS y split-screen */
+.grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* centra filas incompletas */
+  gap: 0.6rem;
 
-  max-width: 100%;
-  transition: transform 0.3s ease-in-out;
+  /* no confiamos en grid minmax en XS: flex es más robusto aquí */
+  --card-basis: 104px; /* base para 320-375 px */
 
-  @include from-lg {
-    width: auto;
-    max-width: 85%;
+  @media (min-width: 380px) {
+    --card-basis: 118px;
+    gap: 0.75rem;
+  }
+  @media (min-width: 480px) {
+    --card-basis: 128px;
+    gap: 0.85rem;
+  }
+  @media (min-width: 768px) {
+    --card-basis: 146px;
+    gap: 1.1rem;
+  }
+  @media (min-width: 1200px) {
+    --card-basis: 166px;
+    gap: 1.25rem;
   }
 }
 
+/* Tarjeta “glass” uniforme */
 .card {
-  --box-size: 5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+  backdrop-filter: saturate(1.1) blur(6px);
 
-  border-color: black;
-  border-width: 0.15rem;
-  border-radius: 10px;
-  margin: 0.5rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: var(--box-size);
-  height: 5.5rem;
-  font-size: 0.7rem;
-  color: black;
-
-  @include from-md {
-    border-width: 0.25rem;
-    margin: 1rem;
-    width: 8rem;
-    height: 8rem;
-    font-size: 1rem;
+  @media (prefers-color-scheme: dark) {
+    background: rgba(20, 22, 26, 0.78);
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
-  .icon {
-    max-width: 75%;
-    aspect-ratio: 2rem;
-    object-fit: contain;
+  min-width: 0; /* previene empujes de layout */
+  display: grid;
+  grid-template-rows: auto auto;
+  place-items: center;
+  padding: 0.7rem;
+  gap: 0.45rem;
+  transition: transform 160ms ease, box-shadow 160ms ease,
+    border-color 160ms ease;
 
-    @include from-md {
-      max-width: 65%;
-    }
+  /* clave: quepa y se envuelva correctamente */
+  flex: 1 1 var(--card-basis);
+  max-width: 200px;    /* límite superior estético */
+  min-width: 0;        /* evita empujes por contenido interno */
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    border-color: color-mix(in oklab, var(--primary) 40%, transparent);
   }
 
-  .iconFA{
-    max-width: 75%;
-    max-height: 75%;
-    min-width: 75%;
-    min-height: 2.75rem;
+  @media (min-width: 768px) {
+    border-radius: 16px;
+    padding: 0.85rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Contenedor de icono: cuadrado uniforme */
+.iconWrap {
+  --iconBox: 56px; /* XS */
+  width: var(--iconBox);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+
+  @media (min-width: 380px) {
+    --iconBox: 64px;
+  }
+  @media (min-width: 768px) {
+    --iconBox: 84px;
+  }
+}
+
+/* FontAwesome: tamaño relativo y color coherente */
+.iconFA {
+  font-size: calc(var(--iconBox) * 0.58);
+  line-height: 1;
+  color: #0f172a; /* casi negro */
+  @media (prefers-color-scheme: dark) {
+    color: #e5e7eb;
+  }
+}
+
+/* Imágenes SVG/PNG: mismas proporciones y color negro con filter */
+.iconImg {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0);
+  opacity: 0.95;
+}
+
+/* Título de la card */
+.cardTitle {
+  margin: 0.1rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 0.95rem;
   }
 }

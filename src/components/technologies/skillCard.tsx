@@ -10,28 +10,32 @@ interface SkillProps {
 }
 
 const SkillCard: React.FC<SkillProps> = ({ skill }) => {
-
-  const icon = typeof skill.icon === 'string' ? (
-    <Image
-      className={styles.icon}
-      src={skill.icon}
-      alt="Skill Icon"
-      width={200}
-      height={200}
-    />
-  ) : (
-    <FontAwesomeIcon
-      className={styles.iconFA}
-      icon={skill.icon || faCode} // faCode es un ícono por defecto, puedes cambiarlo
-    />
-  );
-
+  const icon =
+    typeof skill.icon === "string" ? (
+      <Image
+        className={styles.iconImg}
+        src={skill.icon}
+        alt={skill.name}
+        width={160}
+        height={160}
+        unoptimized
+      />
+    ) : (
+      <FontAwesomeIcon
+        className={styles.iconFA}
+        icon={skill.icon || faCode}
+        aria-hidden={false}
+        title={skill.name}
+      />
+    );
 
   return (
-    <div className={styles.card}>
-      {icon}
-      <h3 className="uppercase">{skill.name}</h3>
-    </div>
+    <article className={styles.card} role="listitem">
+      <div className={styles.iconWrap} aria-hidden>
+        {icon}
+      </div>
+      <h3 className={styles.cardTitle}>{skill.name}</h3>
+    </article>
   );
 };
 

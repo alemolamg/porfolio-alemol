@@ -1,9 +1,16 @@
 import SkillCard from "./skillCard";
 import styles from "./skill.module.scss";
-import { IconDefinition, faAngular, faDocker, faGit, faJava, faPhp, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import {
+  IconDefinition,
+  faAngular,
+  faDocker,
+  faGit,
+  faJava,
+  faPhp,
+  faPython,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import { faComputer, faCubes, faDatabase, faNetworkWired } from "@fortawesome/free-solid-svg-icons";
-
-interface SkillsProps {}
 
 export interface Skill {
   name: string;
@@ -11,32 +18,33 @@ export interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: "java", icon: faJava },
-  { name: "kotlin", icon: "/skill-icons/Kotlin Monochrome Logo.svg" },
+  { name: "Java", icon: faJava },
+  { name: "Kotlin", icon: "/skill-icons/Kotlin Monochrome Logo.svg" },
   { name: "PHP", icon: faPhp },
-  { name: "docker", icon: faDocker },
-  { name: "kubernetes", icon: faCubes },
-  { name: "python", icon: faPython },
-  { name: "sql", icon: faDatabase },
-  { name: "angular", icon: faAngular },
-  { name: "react", icon: faReact },
+  { name: "Docker", icon: faDocker },
+  { name: "Kubernetes", icon: faCubes },
+  { name: "Python", icon: faPython },
+  { name: "SQL", icon: faDatabase },
+  { name: "Angular", icon: faAngular },
+  { name: "React", icon: faReact },
   { name: "Git", icon: faGit },
   { name: "Redes", icon: faNetworkWired },
   { name: "Soporte", icon: faComputer },
 ];
 
-const SkillsContainer: React.FC<SkillsProps> = ({}) => {
+const SkillsContainer: React.FC = () => {
   return (
-    <div className={styles.container} id="skills">
-      <h2 className="flex justify-center mb-5 text-xl">
+    <section className={styles.container} id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" className={styles.sectionTitle}>
         Tecnologías con las que trabajo
       </h2>
-      <div className={styles.skillContainer}>
-        {skills.map((tecnologia, index) => (
-          <SkillCard key={index} skill={tecnologia} />
+
+      <div className={styles.grid}>
+        {skills.map((skill, i) => (
+          <SkillCard key={i} skill={skill} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

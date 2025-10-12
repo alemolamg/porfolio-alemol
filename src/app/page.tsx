@@ -9,8 +9,8 @@ export default function Home() {
     <main id="main" className={styles.main}>
       <Presentation />
       <ContainerDescrip />
-      {/* <SkillsContainer />
-      <Footer /> */}
+      <SkillsContainer />
+      {/* <Footer /> */}
     </main>
   );
 }
