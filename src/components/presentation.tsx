@@ -63,6 +63,7 @@ const Presentation: React.FC = () => {
           className={styles.imageDesc}
           width={400}
           height={300}
+          unoptimized
           sizes="(max-width: 768px) 0px, 22vw"
         />
       </section>
