@@ -10,7 +10,7 @@ export default function Home() {
       <Presentation />
       <ContainerDescrip />
       <SkillsContainer />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

@@ -9,18 +9,20 @@ interface ScrollToTopButtonProps {
   containerStyle?: string;
 }
 
-
-const ScrollToTopButton: FC<ScrollToTopButtonProps> = (props) => {
+const ScrollToTopButton: FC<ScrollToTopButtonProps> = ({ iconStyle, containerStyle }) => {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Desplazamiento suave
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <button className={props.containerStyle} onClick={scrollToTop}>
-      <FontAwesomeIcon className={cx(props.iconStyle)} icon={faCircleArrowUp} />
+    <button
+      type="button"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+      className={containerStyle}
+      onClick={scrollToTop}
+    >
+      <FontAwesomeIcon className={cx(iconStyle)} icon={faCircleArrowUp} />
     </button>
   );
 };
