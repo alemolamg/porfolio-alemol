@@ -28,7 +28,7 @@ const Presentation: React.FC = () => {
           </div>
 
           <h1 className={styles.name}>Alejandro Molero Gómez</h1>
-          <p className={styles.role}>Full‑Stack Developer & SysAdmin</p>
+          <p className={styles.role}>Full‑Stack Developer & IT Administrator</p>
 
           <div className={styles.actions}>
             <DownloadButton />
@@ -39,7 +39,7 @@ const Presentation: React.FC = () => {
         <div className={styles.heroText}>
           <h2 className={styles.claim}>Transformo ideas en sistemas eficientes y escalables</h2>
           <p className={styles.subClaim}>
-            Experiencia en desarrollo backend, automatización y optimización de procesos empresariales.
+            Experiencia en desarrollo frontend y  backend, automatización y optimización de procesos empresariales.
           </p>
         </div>
       </section>
@@ -49,8 +49,8 @@ const Presentation: React.FC = () => {
         <div>
           <h2 id="desc-title" className="mx-5 md:mx-20 text-2xl">Descripción profesional</h2>
           <p className={clsx("mx-5 md:mx-20 my-5")}>
-            Soy un programador de backend con experiencia en diversos sectores y proyectos,
-            utilizando herramientas como Node.js, Next.js, PHP, Python, Docker, Redis y MSSQL.
+            Soy un programador web tanto frontend como backend con experiencia en diversos sectores y proyectos,
+            utilizando herramientas como Node.js, Next.js, PHP, Python, Java, Springboot, Docker, Redis y MSSQL.
             Me adapto a diferentes entornos y tecnologías, con un enfoque en rendimiento,
             escalabilidad y fiabilidad. Mi objetivo es seguir creciendo como profesional
             y aportar soluciones que impulsen la eficiencia y digitalización empresarial.
