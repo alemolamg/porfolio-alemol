@@ -5,7 +5,7 @@ import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import styles from "./downloadPDF.module.scss";
 
 const DownloadButton: React.FC = () => {
-  const curriculum_route = "/Currículum vítae Alejandro Molero 2025.pdf";
+  const curriculum_route = "/Curriculum_Alejandro_Molero_Gomez 2025.pdf";
 
   const downloadFile = (url: string) => {
     const aTag = document.createElement("a");
