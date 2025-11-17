@@ -46,9 +46,11 @@ const Presentation: React.FC = () => {
 
       {/* Descripción profesional */}
       <section className={styles.description} id="description" aria-labelledby="desc-title">
-        <div>
-          <h2 id="desc-title" className="mx-5 md:mx-20 text-2xl">Descripción profesional</h2>
-          <p className={clsx("mx-5 md:mx-20 my-5")}>
+        <div className={styles.descriptionContent}>
+          <h2 id="desc-title" className={styles.descriptionTitle}>
+            Descripción profesional
+          </h2>
+          <p className={styles.descriptionText}>
             Soy un programador web tanto frontend como backend con experiencia en diversos sectores y proyectos,
             utilizando herramientas como Node.js, Next.js, PHP, Python, Java, Springboot, Docker, Redis y MSSQL.
             Me adapto a diferentes entornos y tecnologías, con un enfoque en rendimiento,
@@ -57,15 +59,17 @@ const Presentation: React.FC = () => {
           </p>
         </div>
 
-        <Image
-          src="/gifs/codificacion.gif"
-          alt="Animación de codificación"
-          className={styles.imageDesc}
-          width={400}
-          height={300}
-          unoptimized
-          sizes="(max-width: 768px) 0px, 22vw"
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/gifs/codificacion.gif"
+            alt="Animación de codificación"
+            className={styles.imageDesc}
+            width={400}
+            height={300}
+            unoptimized
+            sizes="(max-width: 768px) 0px, 22vw"
+          />
+        </div>
       </section>
     </div>
   );

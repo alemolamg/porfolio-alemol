@@ -128,33 +128,89 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 1.25rem;
-  padding: 2.25rem 1.25rem 3rem;
-  background-color: var(--desc-bg);
+  gap: 2rem;
+  padding: 3rem 1.5rem 4rem;
+  background-color: #ffffff; /* blanco puro en modo claro */
   text-align: justify;
+  position: relative;
+  overflow: hidden;
+
+  /* Fondo decorativo sutil */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-darker));
+    opacity: 0.3;
+  }
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--desc-bg-dark);
+    
+    &::before {
+      opacity: 0.5;
+    }
   }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr auto; /* texto + imagen */
-    padding: 3rem 3rem;
+    padding: 4rem 3rem 5rem;
+    gap: 3rem;
   }
+}
 
-  h2 {
-    font-weight: 800;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    margin-bottom: 0.5rem;
+.descriptionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 65ch; /* ancho óptimo para lectura */
   }
+}
 
-  .imageDesc {
-    display: none;
-    max-width: min(22vw, 380px);
-    height: auto;
+.descriptionTitle {
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
 
-    @media (min-width: 768px) {
-      display: block;
-    }
+.descriptionText {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  margin: 0;
+  color: var(--text);
+  opacity: 0.85;
+
+  @media (prefers-color-scheme: dark) {
+    opacity: 0.9;
+  }
+}
+
+.imageWrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.imageDesc {
+  max-width: min(22vw, 380px);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: none; /* sin sombra en modo claro */
+  
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 }
