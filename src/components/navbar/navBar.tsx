@@ -5,6 +5,7 @@ import styles from "./navbar.module.scss";
 const Navbar: FC = () => {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
 
   // Cierra el panel al pulsar Escape
   useEffect(() => {
@@ -18,7 +19,11 @@ const Navbar: FC = () => {
   // Cierra si haces click fuera del panel
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if (open && panelRef.current && !panelRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      const clickedOutsidePanel = panelRef.current && !panelRef.current.contains(target);
+      const clickedOutsideTrigger = triggerRef.current && !triggerRef.current.contains(target);
+
+      if (open && clickedOutsidePanel && clickedOutsideTrigger) {
         setOpen(false);
       }
     };
@@ -26,12 +31,12 @@ const Navbar: FC = () => {
     return () => document.removeEventListener("mousedown", onClick);
   }, [open]);
 
-  const MenuLinks = () => (
+  const MenuLinks = ({ onNavigate }: { onNavigate?: () => void }) => (
     <>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#description">Acerca de mi</a></li>
-      <li><a href="#skills">Conocimientos</a></li>
-      <li><a href="#footer">Contacto</a></li>
+      <li><a href="#" onClick={onNavigate}>Inicio</a></li>
+      <li><a href="#description" onClick={onNavigate}>Acerca de mi</a></li>
+      <li><a href="#skills" onClick={onNavigate}>Conocimientos</a></li>
+      <li><a href="#footer" onClick={onNavigate}>Contacto</a></li>
     </>
   );
 
@@ -40,6 +45,7 @@ const Navbar: FC = () => {
       {/* Botón hamburguesa (visible en móvil por estilos) */}
       <button
         type="button"
+        ref={triggerRef}
         className={styles.menuIcon}
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={open}
@@ -67,7 +73,7 @@ const Navbar: FC = () => {
             aria-modal="true"
           >
             <ul>
-              <MenuLinks />
+              <MenuLinks onNavigate={() => setOpen(false)} />
             </ul>
             <div className={styles.links}>{/* redes */}</div>
           </div>

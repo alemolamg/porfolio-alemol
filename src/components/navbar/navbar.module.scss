@@ -54,21 +54,36 @@
 }
 
 /* Panel móvil (overlay). En desktop lo mostramos como panel lateral derecho */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 54;
+  background: rgba(8, 16, 30, 0.42);
+  backdrop-filter: blur(2px);
+}
+
 .menuPanel {
   position: fixed;
-  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  top: 3.35rem;
+  left: 1rem;
+  right: 1rem;
+  max-height: calc(100dvh - 4.35rem);
   z-index: 55;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 4rem 2rem 2rem;
-  color: white;
+  gap: 1rem;
+  padding: 1rem 1rem .85rem;
+  border-radius: 16px;
+  overflow: auto;
+  color: #f8fafc;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,.65),
-    rgba(0,0,0,.35)
+    rgba(8, 24, 44, 0.94),
+    rgba(10, 34, 60, 0.9)
   );
-  backdrop-filter: blur(6px) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 45px rgba(4, 10, 22, 0.4);
+  backdrop-filter: blur(8px) saturate(1.05);
 }
 
 .menuPanel ul {
@@ -77,8 +92,15 @@
   margin: 0;
 }
 
-.menuPanel li { margin-bottom: 1rem; }
-.menuPanel a { color: white; text-decoration: none; font-size: 1.1rem; }
+.menuPanel li { margin-bottom: .85rem; }
+.menuPanel a {
+  display: block;
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
 
 /* Área para redes u otros enlaces */
 .links {
@@ -86,15 +108,22 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: auto; /* empuja al final */
+  margin-top: .25rem;
 }
 
 .icon { height: 2rem; }
 
 /* En desktop, el panel se convierte en sidebar a la derecha */
 @media (min-width: 768px) {
+  .backdrop { display: none; }
+
   .menuPanel {
+    top: 0;
+    bottom: 0;
     left: auto;
+    right: 0;
+    max-height: none;
+    border-radius: 0;
     width: 320px;
     background: var(--menu-bg);
     color: #fff;
