@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Porfolio — Alemol
 
-## Getting Started
+## Sobre mí
 
-First, run the development server:
+Soy un profesional con un perfil **variado y multidisciplinar**, combinando desarrollo de software con tareas de IT y soporte técnico. Me muevo con comodidad tanto en el mundo del código como en la administración de sistemas, redes y resolución de incidencias, lo que me permite aportar valor en equipos técnicos de naturaleza diversa.
+
+A lo largo de mi trayectoria he desarrollado **amplios conocimientos en distintos ámbitos** de la tecnología: programación web y de aplicaciones, gestión de infraestructura, automatización de procesos y soporte a usuarios. Esta versatilidad me permite entender los problemas desde distintos ángulos y proponer soluciones integrales.
+
+Además, cada vez tengo un perfil más orientado a la **gestión y coordinación de equipos**. Me interesa tanto el detalle técnico como la visión de conjunto: priorizar tareas, comunicar con claridad, alinear esfuerzos y asegurar que los proyectos avancen de forma eficiente. Combino habilidades de manager con el conocimiento hands-on de alguien que también programa y administra sistemas.
+
+En definitiva, soy alguien que disfruta aprendiendo continuamente, adaptándose a nuevos contextos y aportando tanto en tareas técnicas como en la toma de decisiones estratégicas dentro de un equipo de tecnología.
+
+---
+
+## Tecnologías y stack de este proyecto
+
+Este portfolio está construido con [Next.js](https://nextjs.org/), un framework de React que permite renderizado del lado del servidor, generación estática y mucho más. El proyecto fue inicializado con [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+---
+
+## Cómo lanzar el proyecto en local
+
+Primero, instala las dependencias si aún no lo has hecho:
+
+```bash
+npm install
+```
+
+Luego, arranca el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
+# o con yarn
 yarn dev
-# or
+# o con pnpm
 pnpm dev
-# or
+# o con bun
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+El punto de entrada principal de la aplicación es `src/app/page.tsx`. Cualquier cambio que hagas en ese archivo se refleja automáticamente en el navegador sin necesidad de recargar.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Despliegue
 
-To learn more about Next.js, take a look at the following resources:
+La forma más sencilla de desplegar este proyecto es usando [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), la plataforma de los creadores de Next.js. Solo conecta tu repositorio y se encarga del resto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/deployment) para más opciones.
