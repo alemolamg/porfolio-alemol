@@ -3,6 +3,7 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import styles from "./navbar.module.scss";
 import LinkIcons from "../../app/utils/links";
 import clsx from "clsx";
+import SmoothAnchor from "../../app/utils/smoothAnchor";
 
 const menuItems = [
   { href: "#main", label: "Inicio" },
@@ -15,9 +16,9 @@ const MenuLinks = ({ onNavigate }: { onNavigate?: () => void }) => (
   <>
     {menuItems.map((item) => (
       <li key={item.label}>
-        <a href={item.href} onClick={onNavigate}>
+        <SmoothAnchor href={item.href} onNavigate={onNavigate}>
           {item.label}
-        </a>
+        </SmoothAnchor>
       </li>
     ))}
   </>
@@ -52,10 +53,10 @@ const NavBar: FC = () => {
 
   return (
     <nav className={styles.navbar} aria-label="Principal">
-      <a className={styles.brand} href="#main" aria-label="Ir al inicio">
+      <SmoothAnchor className={styles.brand} href="#main" aria-label="Ir al inicio">
         <span className={styles.brandMark}>AMG</span>
         <span className={styles.brandText}>Alejandro Molero Gómez</span>
-      </a>
+      </SmoothAnchor>
 
       <ul className={styles.inlineList} role="menubar">
         <MenuLinks />

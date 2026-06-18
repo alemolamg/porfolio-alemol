@@ -15,7 +15,7 @@ const highlights = [
   "5+ años de experiencia",
   "Responsable de IT",
   "Desarrollo full-stack",
-  "Automatización e IA aplicada",
+  "Soporte IT y procesos",
 ];
 
 const metrics = [
@@ -32,8 +32,8 @@ const capabilities = [
   },
   {
     icon: faMicrochip,
-    title: "IA aplicada",
-    text: "Integro modelos y automatismos donde de verdad aportan contexto, velocidad y soporte al equipo.",
+    title: "Automatización aplicada",
+    text: "Combino automatismos e IA cuando aportan contexto real, velocidad y menos carga operativa para el equipo.",
   },
   {
     icon: faShieldHalved,
@@ -53,15 +53,16 @@ const Presentation: React.FC = () => {
         <div className={styles.copy}>
           <div className={styles.kicker}>Portfolio profesional</div>
           <h1 id="hero-title" className={styles.title}>
-            Conecto desarrollo, automatización e IA para crear sistemas más
-            útiles, claros y escalables.
+            Conecto desarrollo, soporte IT y automatización para crear sistemas
+            más útiles, claros y escalables.
           </h1>
           <p className={styles.lead}>
             Soy Alejandro Molero Gómez, Responsable de IT en Grupoasesores.
             Aporto criterio técnico para construir, integrar y automatizar
             procesos con una visión muy práctica: menos fricción, más control y
             mejor trazabilidad. Mi experiencia combina desarrollo web, cloud
-            migration, ERP y soporte a equipos internos.
+            migration, ERP, soporte a equipos internos e IA aplicada cuando
+            realmente ayuda al proceso.
           </p>
 
           <div className={styles.ctaRow}>
@@ -87,6 +88,7 @@ const Presentation: React.FC = () => {
               width={240}
               height={240}
               priority
+              sizes="(max-width: 899px) 240px, 250px"
             />
           </div>
 

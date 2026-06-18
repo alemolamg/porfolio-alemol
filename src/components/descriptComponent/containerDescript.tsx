@@ -33,9 +33,9 @@ const timeline: TimelineItem[] = [
   },
   {
     period: "Línea de trabajo",
-    title: "Automatización e IA",
+    title: "Automatización y mejora",
     text:
-      "Trabajo con orquestadores, integración entre herramientas y soluciones basadas en IA para reducir tareas repetitivas y ganar trazabilidad.",
+      "Trabajo con orquestadores, integración entre herramientas y apoyo de IA para reducir tareas repetitivas y ganar trazabilidad sin complicar la operación.",
     icon: faRobot,
   },
   {

@@ -19,6 +19,7 @@ const SkillCard: React.FC<SkillProps> = ({ skill }) => {
         width={160}
         height={160}
         unoptimized
+        sizes="52px"
       />
     ) : (
       <FontAwesomeIcon

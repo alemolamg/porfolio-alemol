@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./footer.module.scss";
 import LinkIcons from "../../app/utils/links";
 import ScrollToTopButton from "./topButton";
+import SmoothAnchor from "../../app/utils/smoothAnchor";
 
 const Footer: React.FC = () => {
   const myEmail = "hello@alemolamg.com";
@@ -23,16 +24,16 @@ const Footer: React.FC = () => {
           <h4>Secciones</h4>
           <ul>
             <li>
-              <a href="#main">Inicio</a>
+              <SmoothAnchor href="#main">Inicio</SmoothAnchor>
             </li>
             <li>
-              <a href="#about">Trayectoria</a>
+              <SmoothAnchor href="#about">Trayectoria</SmoothAnchor>
             </li>
             <li>
-              <a href="#skills">Capacidades</a>
+              <SmoothAnchor href="#skills">Capacidades</SmoothAnchor>
             </li>
             <li>
-              <a href="#footer">Contacto</a>
+              <SmoothAnchor href="#footer">Contacto</SmoothAnchor>
             </li>
           </ul>
         </nav>

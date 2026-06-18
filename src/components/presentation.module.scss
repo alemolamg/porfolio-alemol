@@ -84,7 +84,7 @@
 .highlight {
   padding: 0.55rem 0.8rem;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.05);
+  background: rgba(63, 106, 152, 0.08);
   color: rgba(15, 23, 42, 0.82);
   font-size: 0.88rem;
   font-weight: 700;
@@ -137,7 +137,7 @@
 .metric {
   padding: 0.85rem;
   border-radius: 18px;
-  background: rgba(15, 23, 42, 0.04);
+  background: rgba(63, 106, 152, 0.06);
   display: grid;
   gap: 0.35rem;
   min-width: 0;
@@ -168,8 +168,8 @@
   align-items: start;
   padding: 0.95rem;
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.06), rgba(20, 184, 166, 0.04));
-  border: 1px solid rgba(37, 99, 235, 0.08);
+  background: linear-gradient(180deg, rgba(63, 106, 152, 0.09), rgba(20, 184, 166, 0.035));
+  border: 1px solid rgba(63, 106, 152, 0.1);
 }
 
 .capabilityIcon {
@@ -214,8 +214,8 @@
   }
 
   .kicker {
-    color: #bfdbfe;
-    background: rgba(37, 99, 235, 0.16);
+    color: #d7e7f7;
+    background: rgba(63, 106, 152, 0.18);
   }
 
   .lead,
@@ -233,8 +233,8 @@
 
   .metric,
   .capability {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(148, 163, 184, 0.10);
+    background: rgba(63, 106, 152, 0.08);
+    border-color: rgba(148, 163, 184, 0.12);
   }
 
   .metricValue {
@@ -242,7 +242,7 @@
   }
 
   .capabilityIcon {
-    color: #93c5fd;
+    color: #b7d1ec;
   }
 
   .name,

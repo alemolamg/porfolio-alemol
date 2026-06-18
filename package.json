@@ -1,6 +1,6 @@
 {
   "name": "porfolio-alemol-new",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev -H 127.0.0.1",
@@ -26,7 +26,7 @@
     "@types/node": "^25.9.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^10",
+    "eslint": "^9.39.1",
     "eslint-config-next": "^16.2.9",
     "typescript": "^6.0.2"
   }

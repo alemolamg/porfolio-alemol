@@ -3,6 +3,7 @@ import cx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FC } from "react";
+import { scrollToHash } from "../../app/utils/smoothScroll";
 
 interface ScrollToTopButtonProps {
   iconStyle?: string;
@@ -11,7 +12,7 @@ interface ScrollToTopButtonProps {
 
 const ScrollToTopButton: FC<ScrollToTopButtonProps> = ({ iconStyle, containerStyle }) => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToHash("#main");
   };
 
   return (

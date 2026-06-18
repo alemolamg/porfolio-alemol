@@ -1,20 +1,21 @@
 import React, { FC } from "react";
 import styles from "./staticNavbar.module.scss";
+import SmoothAnchor from "../../app/utils/smoothAnchor";
 
 const StaticNav: FC = () => {
   return (
     <ul className={styles.navbar}>
       <li>
-        <a href="#main">Inicio</a>
+        <SmoothAnchor href="#main">Inicio</SmoothAnchor>
       </li>
       <li>
-        <a href="#about">Trayectoria</a>
+        <SmoothAnchor href="#about">Trayectoria</SmoothAnchor>
       </li>
       <li>
-        <a href="#skills">Capacidades</a>
+        <SmoothAnchor href="#skills">Capacidades</SmoothAnchor>
       </li>
       <li>
-        <a href="#footer">Contacto</a>
+        <SmoothAnchor href="#footer">Contacto</SmoothAnchor>
       </li>
     </ul>
   );

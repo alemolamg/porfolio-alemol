@@ -14,11 +14,12 @@
   --text: #0c1624;
   --text-dark: #edf2f7;
 
-  --primary: #2563eb;
-  --primary-darker: #0f2f6b;
-  --primary-soft: rgba(37, 99, 235, 0.12);
+  --primary: #3f6a98;
+  --primary-darker: #284766;
+  --primary-soft: rgba(63, 106, 152, 0.14);
   --accent: #14b8a6;
   --accent-soft: rgba(20, 184, 166, 0.12);
+  --nav-offset: 5rem;
 
   --gray-100: hsl(220 33% 96%);
   --gray-300: hsl(221 20% 78%);
@@ -64,6 +65,11 @@ body {
     var(--bg);
   color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+html {
+  scroll-padding-top: calc(var(--nav-offset) + 0.5rem);
 }
 
 *,
@@ -79,6 +85,12 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main[id],
+section[id],
+footer[id] {
+  scroll-margin-top: calc(var(--nav-offset) + 0.5rem);
 }
 
 h1,
@@ -118,7 +130,7 @@ h4 {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(63, 106, 152, 0.2);
   color: var(--text);
 }
 .u-reveal--visible {

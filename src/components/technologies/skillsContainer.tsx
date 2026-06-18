@@ -51,8 +51,8 @@ const groups: SkillGroup[] = [
     ],
   },
   {
-    title: "Automatización e IA",
-    subtitle: "Flujos inteligentes, asistentes y orquestación de procesos.",
+    title: "Soporte y automatización",
+    subtitle: "Procesos conectados, soporte operativo y automatización útil.",
     skills: [
       { name: "IA", icon: faRobot },
       { name: "Orquestación", icon: faWandMagicSparkles },

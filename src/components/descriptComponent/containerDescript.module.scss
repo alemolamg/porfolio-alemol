@@ -16,8 +16,8 @@
   justify-self: center;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  background: rgba(20, 184, 166, 0.12);
-  color: #0f766e;
+  background: rgba(63, 106, 152, 0.12);
+  color: var(--primary-darker);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -43,6 +43,8 @@
   margin: 0 auto;
   display: grid;
   gap: 1rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 920px;
 
   @media (min-width: 820px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -130,8 +132,8 @@
   }
 
   .badge {
-    background: rgba(20, 184, 166, 0.16);
-    color: #5eead4;
+    background: rgba(63, 106, 152, 0.18);
+    color: #d7e7f7;
   }
 
   .intro,
@@ -145,7 +147,7 @@
   }
 
   .period {
-    color: #93c5fd;
+    color: #b7d1ec;
   }
 
   .cardFoot {
@@ -158,6 +160,6 @@
   }
 
   .icon {
-    color: #93c5fd;
+    color: #b7d1ec;
   }
 }
