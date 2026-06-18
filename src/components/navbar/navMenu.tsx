@@ -40,10 +40,10 @@ const MyComponent: FC = () => {
           )}
         >
           <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="#description">Acerca de mi </a></li>
-            <li><a href="#skills">Conocimientos</a></li>
-            <li>Contacto</li>
+            <li><a href="#main">Inicio</a></li>
+            <li><a href="#about">Trayectoria</a></li>
+            <li><a href="#skills">Capacidades</a></li>
+            <li><a href="#footer">Contacto</a></li>
           </ul>
           <div className={styles.socialMedia}>
             <p>enlaces:</p>

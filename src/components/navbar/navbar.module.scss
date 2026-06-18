@@ -1,5 +1,3 @@
-/* Navbar estilos: mobile-first, sin imports, usando variables CSS globales */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -7,53 +5,92 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: .5rem;
-  padding: .5rem 1rem;
-  background: color-mix(in oklab, var(--bg) 86%, white 14%);
-  backdrop-filter: saturate(1.1) blur(6px);
+  gap: 0.85rem;
+  padding: 0.8rem 1rem;
+  background: rgba(248, 250, 252, 0.72);
+  backdrop-filter: blur(18px) saturate(1.2);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
-/* Botón hamburguesa (visible en móvil) */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.brandMark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.brandText {
+  display: none;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.socialIcon {
+  min-height: 1.4rem;
+}
+
 .menuIcon {
   appearance: none;
-  border: 1px solid rgba(0,0,0,.08);
-  background: #fff;
-  color: #111;
-  border-radius: 10px;
-  padding: .4rem .6rem;
-  font-size: 1.25rem;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
-  z-index: 60; /* por encima del panel */
-  box-shadow: var(--shadow-1);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
 }
 
-/* Lista inline solo en desktop */
 .inlineList {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 1rem;
 }
 
-.inlineList li { margin: 0; }
+.inlineList li {
+  margin: 0;
+}
+
 .inlineList a {
-  display: inline-block;
-  padding: .35rem .5rem;
-  font-size: .95rem;
-  text-decoration: none;
-}
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  color: rgba(12, 22, 36, 0.82);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
 
-@media (min-width: 768px) {
-  .menuIcon { display: none; }
-  .inlineList {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 600;
+  &:hover {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-darker);
   }
 }
 
-/* Panel móvil (overlay). En desktop lo mostramos como panel lateral derecho */
 .backdrop {
   position: fixed;
   inset: 0;
@@ -64,24 +101,19 @@
 
 .menuPanel {
   position: fixed;
-  top: 3.35rem;
+  top: 4.2rem;
   left: 1rem;
   right: 1rem;
-  max-height: calc(100dvh - 4.35rem);
   z-index: 55;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 1rem .85rem;
-  border-radius: 16px;
+  padding: 1rem;
+  border-radius: 24px;
   overflow: auto;
   color: #f8fafc;
-  background: linear-gradient(
-    to bottom,
-    rgba(8, 24, 44, 0.94),
-    rgba(10, 34, 60, 0.9)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(8, 18, 31, 0.98), rgba(13, 23, 38, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 18px 45px rgba(4, 10, 22, 0.4);
   backdrop-filter: blur(8px) saturate(1.05);
 }
@@ -92,41 +124,59 @@
   margin: 0;
 }
 
-.menuPanel li { margin-bottom: .85rem; }
+.menuPanel li {
+  margin-bottom: 0.5rem;
+}
+
 .menuPanel a {
   display: block;
   color: #f8fafc;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.7rem 0.25rem;
 }
 
-/* Área para redes u otros enlaces */
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: .25rem;
+@media (min-width: 760px) {
+  .brandText {
+    display: inline;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  .inlineList {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .menuPanel,
+  .backdrop {
+    display: none;
+  }
 }
 
-.icon { height: 2rem; }
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(8, 17, 31, 0.72);
+    border-bottom-color: rgba(148, 163, 184, 0.14);
+  }
 
-/* En desktop, el panel se convierte en sidebar a la derecha */
-@media (min-width: 768px) {
-  .backdrop { display: none; }
+  .brandText,
+  .inlineList a,
+  .menuIcon {
+    color: #e2e8f0;
+  }
 
-  .menuPanel {
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: 0;
-    max-height: none;
-    border-radius: 0;
-    width: 320px;
-    background: var(--menu-bg);
-    color: #fff;
-    padding: 3rem 1.5rem;
+  .menuIcon {
+    background: rgba(15, 23, 42, 0.92);
+    border-color: rgba(148, 163, 184, 0.16);
+  }
+
+  .inlineList a:hover {
+    background: rgba(37, 99, 235, 0.16);
+    color: #f8fafc;
   }
 }

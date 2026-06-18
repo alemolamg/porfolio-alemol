@@ -5,28 +5,36 @@
 
 /* Variables CSS (tema claro/oscuro) */
 :root {
-  --bg: #306b9c; /* antes: $bg-color */
-  --bg-dark: hsl(209 100% 16%); /* antes: $bg-color-dark */
-  --text: #0b0c0f;
-  --text-dark: #fff;
+  --bg: #f3f6fb;
+  --bg-dark: #08111f;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --surface-dark: rgba(12, 18, 30, 0.82);
+  --surface-dark-strong: rgba(12, 18, 30, 0.94);
+  --text: #0c1624;
+  --text-dark: #edf2f7;
 
-  --primary: #177ccf; /* $color-primary */
-  --primary-darker: #002a52;
-  --primary-desat: hsl(211 40% 60%);
+  --primary: #2563eb;
+  --primary-darker: #0f2f6b;
+  --primary-soft: rgba(37, 99, 235, 0.12);
+  --accent: #14b8a6;
+  --accent-soft: rgba(20, 184, 166, 0.12);
 
-  --gray-100: hsl(0 0% 93%);
-  --gray-300: hsl(0 0% 69%);
-  --gray-500: hsl(221 12% 60%);
-  --gray-600: hsl(211 12% 52%);
+  --gray-100: hsl(220 33% 96%);
+  --gray-300: hsl(221 20% 78%);
+  --gray-500: hsl(221 17% 56%);
+  --gray-600: hsl(217 19% 44%);
 
-  --menu-bg: hsl(221 12% 60%);
-  --desc-bg: #e1e1e1; /* $bg-description */
-  --desc-bg-dark: #0e1116; /* $bg-description-dark */
-  --desc-small: #333;
-  --footer-bg: #292f33;
+  --menu-bg: #0e1726;
+  --desc-bg: linear-gradient(180deg, #eef3fb 0%, #f8fafc 100%);
+  --desc-bg-dark: linear-gradient(180deg, #0b1320 0%, #0a101a 100%);
+  --desc-small: #0f172a;
+  --footer-bg: #07111d;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Avenir Next", "Segoe UI", Arial, sans-serif;
 
-  --radius: 20px;
-  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 22px;
+  --shadow-1: 0 18px 45px rgba(15, 23, 42, 0.10);
   --max-width: 1100px;
 
   /* Breakpoints (usa directamente en @media) */
@@ -50,8 +58,12 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: var(--bg);
+  background:
+    radial-gradient(900px 500px at 15% 5%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(700px 380px at 85% 10%, rgba(20, 184, 166, 0.08), transparent 55%),
+    var(--bg);
   color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 *,
@@ -67,6 +79,14 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.03em;
 }
 
 /* Accesibilidad */
@@ -95,6 +115,11 @@ a {
   transition: opacity 600ms ease, transform 600ms ease;
   transition-delay: var(--reveal-delay, 0ms);
   will-change: transform, opacity;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--text);
 }
 .u-reveal--visible {
   opacity: 1;

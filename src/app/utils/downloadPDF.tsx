@@ -10,7 +10,7 @@ const DownloadButton: React.FC = () => {
   const downloadFile = (url: string) => {
     const aTag = document.createElement("a");
     aTag.href = url;
-    aTag.download;
+    aTag.download = "";
     aTag.target = "_blank";
     document.body.appendChild(aTag);
     aTag.click();
@@ -23,9 +23,10 @@ const DownloadButton: React.FC = () => {
         downloadFile(curriculum_route);
       }}
       className={styles.downloadButton}
+      type="button"
     >
       <FontAwesomeIcon className={styles.icon} icon={faFileArrowDown} />
-      <p>Currículum</p>
+      <span>Descargar CV</span>
     </button>
   );
 };

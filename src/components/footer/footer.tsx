@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer} id="footer" aria-label="Pie de página">
       <div className={styles.inner}>
-        {/* Bloque principal */}
         <div className={styles.brand}>
+          <span className={styles.label}>Contacto</span>
           <p className={styles.goodbye}>
-            Gracias por llegar hasta aquí. ¡Hablemos! ✌️
+            Si necesitas perfil técnico para ordenar procesos, integrar sistemas o llevar una idea a producción, hablemos.
           </p>
           <a className={styles.mail} href={`mailto:${myEmail}`}>
             {myEmail}
@@ -22,10 +22,18 @@ const Footer: React.FC = () => {
         <nav className={styles.quick} aria-label="Secciones del sitio">
           <h4>Secciones</h4>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Conocimientos</a></li>
-            <li><a href="#footer">Contacto</a></li>
+            <li>
+              <a href="#main">Inicio</a>
+            </li>
+            <li>
+              <a href="#about">Trayectoria</a>
+            </li>
+            <li>
+              <a href="#skills">Capacidades</a>
+            </li>
+            <li>
+              <a href="#footer">Contacto</a>
+            </li>
           </ul>
         </nav>
 
@@ -35,13 +43,10 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Barra de créditos + año */}
       <div className={styles.legalBar}>
-        <p>© 2025 Alejandro Molero Gómez. Todos los derechos reservados.</p>
-        {/* <p>Está prohibido copiar o reproducir el contenido de este sitio sin permiso explícito.</p> */}
+        <p>© 2026 Alejandro Molero Gómez. Todos los derechos reservados.</p>
       </div>
 
-      {/* Botón subir */}
       <ScrollToTopButton iconStyle={styles.topIcon} containerStyle={styles.topButton} />
     </footer>
   );
