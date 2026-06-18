@@ -1,36 +1,33 @@
 /* sin imports: usa variables globales y media queries directas */
 
 .downloadButton {
-  border: 2px solid var(--primary);
-  border-radius: var(--radius);
-  padding: 0.3rem 0.5rem;
-  background: transparent;
-  color: inherit;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0.02));
+  color: var(--text);
 
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-
-  p {
-    margin-right: 0.25rem;
-  }
+  font-size: 0.98rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 
   &:hover {
-    background: var(--primary);
-    color: white;
+    transform: translateY(-1px);
+    border-color: rgba(37, 99, 235, 0.36);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.10);
     cursor: pointer;
   }
 }
 
 .icon {
-  height: 1.25rem;
-  margin: 0.25rem;
+  height: 1.1rem;
 
   @media (min-width: 768px) {
-    height: 2rem;
-    margin: 0.5rem;
+    height: 1.2rem;
   }
 }
   

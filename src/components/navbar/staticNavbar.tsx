@@ -5,13 +5,13 @@ const StaticNav: FC = () => {
   return (
     <ul className={styles.navbar}>
       <li>
-        <a href="#">Inicio</a>
+        <a href="#main">Inicio</a>
       </li>
       <li>
-        <a href="#description">Acerca de mi</a>
+        <a href="#about">Trayectoria</a>
       </li>
       <li>
-        <a href="#skills">Conocimientos</a>
+        <a href="#skills">Capacidades</a>
       </li>
       <li>
         <a href="#footer">Contacto</a>

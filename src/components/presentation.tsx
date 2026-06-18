@@ -1,10 +1,46 @@
 import React from "react";
 import styles from "./presentation.module.scss";
 import Navbar from "./navbar/navBar";
-import clsx from "clsx";
 import LinkIcons from "../app/utils/links";
 import DownloadButton from "../app/utils/downloadPDF";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDiagramProject,
+  faMicrochip,
+  faShieldHalved,
+} from "@fortawesome/free-solid-svg-icons";
+
+const highlights = [
+  "5+ años de experiencia",
+  "Responsable de IT",
+  "Desarrollo full-stack",
+  "Automatización e IA aplicada",
+];
+
+const metrics = [
+  { label: "Foco", value: "Sistemas claros" },
+  { label: "Trabajo", value: "Procesos conectados" },
+  { label: "Impacto", value: "Menos fricción" },
+];
+
+const capabilities = [
+  {
+    icon: faDiagramProject,
+    title: "Orquestación",
+    text: "Diseño flujos y conecto herramientas para que la operación avance con menos pasos manuales.",
+  },
+  {
+    icon: faMicrochip,
+    title: "IA aplicada",
+    text: "Integro modelos y automatismos donde de verdad aportan contexto, velocidad y soporte al equipo.",
+  },
+  {
+    icon: faShieldHalved,
+    title: "Control operativo",
+    text: "Priorizar trazabilidad, estabilidad y mantenimiento es clave cuando los procesos ya están en producción.",
+  },
+];
 
 const Presentation: React.FC = () => {
   const imageURL = "/image_alemol.jpg";
@@ -13,59 +49,73 @@ const Presentation: React.FC = () => {
     <div className={styles.container}>
       <Navbar />
 
-      {/* Nuevo bloque hero con estructura moderna */}
-      <section className={styles.hero}>
+      <section className={styles.hero} aria-labelledby="hero-title">
+        <div className={styles.copy}>
+          <div className={styles.kicker}>Portfolio profesional</div>
+          <h1 id="hero-title" className={styles.title}>
+            Conecto desarrollo, automatización e IA para crear sistemas más
+            útiles, claros y escalables.
+          </h1>
+          <p className={styles.lead}>
+            Soy Alejandro Molero Gómez, Responsable de IT en Grupoasesores.
+            Aporto criterio técnico para construir, integrar y automatizar
+            procesos con una visión muy práctica: menos fricción, más control y
+            mejor trazabilidad. Mi experiencia combina desarrollo web, cloud
+            migration, ERP y soporte a equipos internos.
+          </p>
+
+          <div className={styles.ctaRow}>
+            <DownloadButton />
+            <LinkIcons iconStyle={styles.socialIcon} />
+          </div>
+
+          <div className={styles.highlightRow} aria-label="Resumen profesional">
+            {highlights.map((item) => (
+              <span key={item} className={styles.highlight}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <div className={styles.profileCard}>
           <div className={styles.avatarWrap}>
             <Image
               className={styles.avatar}
               src={imageURL}
               alt="Retrato de Alejandro Molero Gómez"
-              width={220}
-              height={220}
+              width={240}
+              height={240}
               priority
             />
           </div>
 
-          <h1 className={styles.name}>Alejandro Molero Gómez</h1>
-          <p className={styles.role}>Full‑Stack Developer & IT Administrator</p>
+          <div className={styles.identity}>
+            <p className={styles.name}>Alejandro Molero Gómez</p>
+            <p className={styles.role}>Responsable de IT y desarrollo · Grupoasesores</p>
+          </div>
 
-          <div className={styles.actions}>
-            <DownloadButton />
-            <LinkIcons iconStyle={styles.icon} />
+          <div className={styles.metrics} aria-label="Indicadores del perfil">
+            {metrics.map((metric) => (
+              <div key={metric.label} className={styles.metric}>
+                <span className={styles.metricLabel}>{metric.label}</span>
+                <strong className={styles.metricValue}>{metric.value}</strong>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.capabilities}>
+            {capabilities.map((item) => (
+              <article key={item.title} className={styles.capability}>
+                <FontAwesomeIcon className={styles.capabilityIcon} icon={item.icon} />
+                <div>
+                  <h2 className={styles.capabilityTitle}>{item.title}</h2>
+                  <p className={styles.capabilityText}>{item.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-
-        <div className={styles.heroText}>
-          <h2 className={styles.claim}>Transformo ideas en sistemas eficientes y escalables</h2>
-          <p className={styles.subClaim}>
-            Experiencia en desarrollo frontend y  backend, automatización y optimización de procesos empresariales.
-          </p>
-        </div>
-      </section>
-
-      {/* Descripción profesional */}
-      <section className={styles.description} id="description" aria-labelledby="desc-title">
-        <div>
-          <h2 id="desc-title" className="mx-5 md:mx-20 text-2xl">Descripción profesional</h2>
-          <p className={clsx("mx-5 md:mx-20 my-5")}>
-            Soy un programador web tanto frontend como backend con experiencia en diversos sectores y proyectos,
-            utilizando herramientas como Node.js, Next.js, PHP, Python, Java, Springboot, Docker, Redis y MSSQL.
-            Me adapto a diferentes entornos y tecnologías, con un enfoque en rendimiento,
-            escalabilidad y fiabilidad. Mi objetivo es seguir creciendo como profesional
-            y aportar soluciones que impulsen la eficiencia y digitalización empresarial.
-          </p>
-        </div>
-
-        <Image
-          src="/gifs/codificacion.gif"
-          alt="Animación de codificación"
-          className={styles.imageDesc}
-          width={400}
-          height={300}
-          unoptimized
-          sizes="(max-width: 768px) 0px, 22vw"
-        />
       </section>
     </div>
   );

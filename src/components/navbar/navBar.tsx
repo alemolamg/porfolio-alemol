@@ -1,12 +1,33 @@
 "use client";
 import React, { FC, useEffect, useRef, useState } from "react";
 import styles from "./navbar.module.scss";
+import LinkIcons from "../../app/utils/links";
+import clsx from "clsx";
 
-const Navbar: FC = () => {
+const menuItems = [
+  { href: "#main", label: "Inicio" },
+  { href: "#about", label: "Trayectoria" },
+  { href: "#skills", label: "Capacidades" },
+  { href: "#footer", label: "Contacto" },
+];
+
+const MenuLinks = ({ onNavigate }: { onNavigate?: () => void }) => (
+  <>
+    {menuItems.map((item) => (
+      <li key={item.label}>
+        <a href={item.href} onClick={onNavigate}>
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </>
+);
+
+const NavBar: FC = () => {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
 
-  // Cierra el panel al pulsar Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -15,10 +36,13 @@ const Navbar: FC = () => {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  // Cierra si haces click fuera del panel
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if (open && panelRef.current && !panelRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      const clickedOutsidePanel = panelRef.current && !panelRef.current.contains(target);
+      const clickedOutsideTrigger = triggerRef.current && !triggerRef.current.contains(target);
+
+      if (open && clickedOutsidePanel && clickedOutsideTrigger) {
         setOpen(false);
       }
     };
@@ -26,50 +50,45 @@ const Navbar: FC = () => {
     return () => document.removeEventListener("mousedown", onClick);
   }, [open]);
 
-  const MenuLinks = () => (
-    <>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#description">Acerca de mi</a></li>
-      <li><a href="#skills">Conocimientos</a></li>
-      <li><a href="#footer">Contacto</a></li>
-    </>
-  );
-
   return (
     <nav className={styles.navbar} aria-label="Principal">
-      {/* Botón hamburguesa (visible en móvil por estilos) */}
-      <button
-        type="button"
-        className={styles.menuIcon}
-        aria-label={open ? "Cerrar menú" : "Abrir menú"}
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        onClick={() => setOpen((v) => !v)}
-      >
-        {/* Puedes cambiar por un icono SVG */}
-        <span aria-hidden>☰</span>
-      </button>
+      <a className={styles.brand} href="#main" aria-label="Ir al inicio">
+        <span className={styles.brandMark}>AMG</span>
+        <span className={styles.brandText}>Alejandro Molero Gómez</span>
+      </a>
 
-      {/* Lista inline para desktop (estilos la mostrarán solo en md+) */}
       <ul className={styles.inlineList} role="menubar">
         <MenuLinks />
       </ul>
 
-      {/* Panel móvil deslizante / overlay */}
+      <div className={styles.actions}>
+        <LinkIcons iconStyle={styles.socialIcon} />
+        <button
+          type="button"
+          ref={triggerRef}
+          className={styles.menuIcon}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span aria-hidden>☰</span>
+        </button>
+      </div>
+
       {open && (
         <>
           <div className={styles.backdrop} onClick={() => setOpen(false)} aria-hidden />
           <div
             id="mobile-menu"
-            className={styles.menuPanel}
+            className={clsx(styles.menuPanel, styles.menuPanelOpen)}
             ref={panelRef}
             role="dialog"
             aria-modal="true"
           >
             <ul>
-              <MenuLinks />
+              <MenuLinks onNavigate={() => setOpen(false)} />
             </ul>
-            <div className={styles.links}>{/* redes */}</div>
           </div>
         </>
       )}
@@ -77,4 +96,4 @@ const Navbar: FC = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
