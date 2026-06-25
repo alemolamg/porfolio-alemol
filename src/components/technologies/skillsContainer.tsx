@@ -9,16 +9,18 @@ import {
   faPhp,
   faPython,
   faReact,
+  faTypescript,
+  faNode,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faComputer,
   faCubes,
-  faCode,
   faDatabase,
   faNetworkWired,
   faRobot,
   faServer,
   faWandMagicSparkles,
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons";
 import type { SiteCopy } from "@/i18n/siteCopy";
 
@@ -42,13 +44,13 @@ const groups: SkillGroup[] = [
     title: "Desarrollo",
     subtitle: "Construcción de interfaces, servicios y aplicaciones orientadas a negocio.",
     skills: [
-      { name: "TypeScript", icon: faCode },
-      { name: "Next.js", icon: faCode },
+      { name: "TypeScript", icon: faTypescript },
+      { name: "Next.js", icon: "/skill-icons/next.svg" },
       { name: "Java", icon: faJava },
       { name: "Kotlin", icon: "/skill-icons/Kotlin Monochrome Logo.svg" },
       { name: "PHP", icon: faPhp },
       { name: "Python", icon: faPython },
-      { name: "Node.js", icon: faCode },
+      { name: "Node.js", icon: faNode },
       { name: "React", icon: faReact },
       { name: "Angular", icon: faAngular },
       { name: "Spring Boot", icon: faJava },
@@ -75,8 +77,8 @@ const groups: SkillGroup[] = [
       { name: "SQL", icon: faDatabase },
       { name: "Redes", icon: faNetworkWired },
       { name: "Servidores", icon: faServer },
-      { name: "SharePoint", icon: faCode },
-      { name: "OneDrive", icon: faCode },
+      // { name: "SharePoint", icon: faFloppyDisk },
+      { name: "OneDrive", icon: faCloud },
     ],
   },
 ];

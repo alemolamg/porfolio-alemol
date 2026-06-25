@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowTrendUp,
   faBuilding,
+  faGraduationCap,
+  faLightbulb,
   faRobot,
   faTimeline,
 } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +16,7 @@ interface ContainerDescripProps {
   copy: SiteCopy["about"];
 }
 
-const timelineIcons = [faBuilding, faTimeline, faRobot, faArrowTrendUp];
+const timelineIcons = [faBuilding, faTimeline, faGraduationCap, faRobot, faArrowTrendUp, faLightbulb];
 
 const ContainerDescrip: React.FC<ContainerDescripProps> = ({ copy }) => {
   const rootRef = useRef<HTMLDivElement | null>(null);

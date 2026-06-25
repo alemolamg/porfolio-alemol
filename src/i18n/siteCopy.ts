@@ -138,31 +138,43 @@ const copy: Record<Locale, SiteCopy> = {
       badge: "Trayectoria",
       title: "Un recorrido técnico orientado a negocio, operación e innovación útil.",
       intro:
-        "He ido evolucionando hacia un perfil híbrido donde conviven desarrollo, infraestructura y automatización. Mi recorrido incluye migración de ERP, cloud migration, soporte técnico y construcción de soluciones web que hagan que la tecnología trabaje con más orden, contexto y eficiencia.",
+        "He ido evolucionando hacia un perfil híbrido donde conviven desarrollo, infraestructura, soporte y automatización. Mi recorrido pasa por desarrollo full-stack, modernización de ERP, microservicios, cloud migration y mejora de operaciones internas con una idea constante: que la tecnología reduzca fricción y dé más contexto al negocio.",
       timeline: [
         {
-          period: "Etapa anterior",
-          title: "Comaferr",
+          period: "Abril 2026 - Actual",
+          title: "Grupoasesores · Responsable de IT",
           text:
-            "Una fase de consolidación técnica en la que lideré la migración y actualización completa del ERP, mejorando eficiencia operativa e integración con sistemas internos.",
+            "Actualmente coordino sistemas, soporte y evolución tecnológica con foco en estabilidad, escalabilidad y mejora continua. Mi prioridad es que cada implementación aporte criterio técnico claro al negocio, menos pasos manuales y mayor trazabilidad en los procesos internos.",
         },
         {
-          period: "Actualidad",
-          title: "Grupoasesores",
+          period: "2024 - Abril 2026",
+          title: "Comaferr · Responsable técnico y evolución del ERP",
           text:
-            "Actualmente soy Responsable de IT, coordinando sistemas, soporte y evolución tecnológica con foco en estabilidad, escalabilidad y mejora continua.",
+            "Lideré la migración y actualización completa del ERP empresarial, mejorando la eficiencia operativa y su integración con sistemas internos. También desarrollé aplicaciones clave con JavaScript y React, además de administrar la infraestructura tecnológica del departamento para garantizar estabilidad y rendimiento.",
         },
         {
-          period: "Línea de trabajo",
-          title: "Automatización y mejora",
+          period: "2026",
+          title: "Certificación · Partner KNX",
           text:
-            "Trabajo con orquestadores, integración entre herramientas y apoyo de IA para reducir tareas repetitivas y ganar trazabilidad sin complicar la operación.",
+            "Certificación oficial Partner KNX en domótica e instalaciones inteligentes. 30 horas de formación (18 presenciales/prácticas, 12 online/teóricas) trabajando con ETS6 para programación y configuración de sistemas KNX, automatización de edificios y control de instalaciones.",
         },
         {
-          period: "Resultado",
-          title: "Procesos más claros",
+          period: "2022 - 2024",
+          title: "Clickferry · Plataforma web y microservicios",
           text:
-            "Mi objetivo es que cada mejora técnica se traduzca en menos fricción, más control operativo y una experiencia interna más ágil.",
+            "Trabajé en el desarrollo de microservicios con Kotlin y Java, integrando sistemas mediante SOAP y API REST, y participé en la nueva plataforma web con Next.js. Fue una etapa muy enfocada a escalabilidad, integración entre servicios y mejora real de la experiencia de usuario.",
+        },
+        {
+          period: "2022",
+          title: "Carrier · Soporte IT, reporting y migración cloud",
+          text:
+            "Combiné soporte técnico, gestión del ERP JDE Edwards y reporting con MyVision y Crystal Reports, además de participar en la migración de servidores locales a soluciones cloud con OneDrive y SharePoint. Ahí reforcé una base muy operativa, cercana al usuario y orientada a continuidad del servicio.",
+        },
+        {
+          period: "Enfoque de trabajo",
+          title: "Desarrollo, integración y automatización útil",
+          text:
+            "Hoy combino desarrollo full-stack, integración de sistemas, automatización y soporte operativo con una prioridad clara: que cada mejora técnica se traduzca en procesos más mantenibles, más trazabilidad y una operación interna más ágil.",
         },
       ],
     },
@@ -273,31 +285,43 @@ const copy: Record<Locale, SiteCopy> = {
       badge: "Background",
       title: "A technical path shaped around business, operations and useful innovation.",
       intro:
-        "My path has evolved into a hybrid profile where development, infrastructure and automation coexist. It includes ERP migration, cloud migration, technical support and building web solutions that help technology work with more order, context and efficiency.",
+        "My path has evolved into a hybrid profile where development, infrastructure, support and automation coexist. It includes full-stack development, ERP modernization, microservices, cloud migration and improvement of internal operations, always with the same goal: reducing friction and giving the business clearer systems.",
       timeline: [
         {
-          period: "Previous stage",
-          title: "Comaferr",
+          period: "April 2026 - Present",
+          title: "Grupoasesores · IT Lead",
           text:
-            "A technical consolidation phase where I led the migration and full upgrade of the ERP, improving operational efficiency and integration with internal systems.",
+            "I currently coordinate systems, support and technology evolution with a focus on stability, scalability and continuous improvement. My priority is for each implementation to bring clear technical judgment to the business, fewer manual steps and better traceability across internal processes.",
         },
         {
-          period: "Current role",
-          title: "Grupoasesores",
+          period: "2024 - April 2026",
+          title: "Comaferr · ERP evolution and technical ownership",
           text:
-            "I currently serve as IT Lead, coordinating systems, support and technology evolution with a focus on stability, scalability and continuous improvement.",
+            "I led the migration and full upgrade of the company's ERP, improving operational efficiency and integration with internal systems. I also built key business applications with JavaScript and React, while managing the department's IT infrastructure to ensure stability and performance.",
         },
         {
-          period: "Working line",
-          title: "Automation and improvement",
+          period: "2026",
+          title: "Certification · KNX Partner",
           text:
-            "I work with orchestrators, tool-to-tool integrations and AI support to reduce repetitive tasks and gain traceability without adding operational complexity.",
+            "Official KNX Partner certification in home and building automation. 30-hour training program (18 in-person/practical, 12 online/theoretical) working with ETS6 for programming and configuring KNX systems, building automation and installation control.",
         },
         {
-          period: "Outcome",
-          title: "Clearer processes",
+          period: "2022 - 2024",
+          title: "Clickferry · Web platform and microservices",
           text:
-            "My goal is for each technical improvement to translate into less friction, more operational control and a faster internal experience.",
+            "I worked on microservices with Kotlin and Java, integrating systems through SOAP and REST APIs, and contributed to the new web platform built with Next.js. This stage was strongly focused on scalability, service integration and meaningful UX improvements.",
+        },
+        {
+          period: "2022",
+          title: "Carrier · IT support, reporting and cloud migration",
+          text:
+            "I combined user support, JDE Edwards ERP management and reporting with MyVision and Crystal Reports, while also helping migrate local servers to cloud solutions with OneDrive and SharePoint. It strengthened a practical, user-facing and service continuity mindset.",
+        },
+        {
+          period: "Working approach",
+          title: "Development, integration and useful automation",
+          text:
+            "Today I combine full-stack development, systems integration, automation and operational support with a clear priority: every technical improvement should produce more maintainable processes, stronger traceability and smoother internal operations.",
         },
       ],
     },
