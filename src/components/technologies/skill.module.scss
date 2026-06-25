@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: clamp(3rem, 7vw, 5rem) 1rem;
+  padding: clamp(3rem, 7vw, 5rem) 1rem clamp(4rem, 8vw, 6rem);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.02));
 }
 
@@ -42,23 +42,23 @@
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   content-visibility: auto;
   contain-intrinsic-size: 860px;
 }
 
 .group {
-  padding: 1.1rem;
+  padding: 1.5rem;
   border-radius: calc(var(--radius) + 2px);
   background: var(--surface);
   border: 1px solid rgba(148, 163, 184, 0.18);
-  box-shadow: var(--shadow-1);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .groupHeader {
   display: grid;
   gap: 0.35rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .groupTitle {
@@ -156,6 +156,7 @@
   .card {
     background: var(--surface-dark);
     border-color: rgba(148, 163, 184, 0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 
   .sectionTitle,
