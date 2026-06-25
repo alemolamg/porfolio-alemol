@@ -8,46 +8,15 @@ import {
   faRobot,
   faTimeline,
 } from "@fortawesome/free-solid-svg-icons";
+import type { SiteCopy } from "@/i18n/siteCopy";
 
-interface TimelineItem {
-  period: string;
-  title: string;
-  text: string;
-  icon: typeof faTimeline;
+interface ContainerDescripProps {
+  copy: SiteCopy["about"];
 }
 
-const timeline: TimelineItem[] = [
-  {
-    period: "Etapa anterior",
-    title: "Comaferr",
-    text:
-      "Una fase de consolidación técnica en la que lideré la migración y actualización completa del ERP, mejorando eficiencia operativa e integración con sistemas internos.",
-    icon: faBuilding,
-  },
-  {
-    period: "Actualidad",
-    title: "Grupoasesores",
-    text:
-      "Actualmente soy Responsable de IT, coordinando sistemas, soporte y evolución tecnológica con foco en estabilidad, escalabilidad y mejora continua.",
-    icon: faTimeline,
-  },
-  {
-    period: "Línea de trabajo",
-    title: "Automatización y mejora",
-    text:
-      "Trabajo con orquestadores, integración entre herramientas y apoyo de IA para reducir tareas repetitivas y ganar trazabilidad sin complicar la operación.",
-    icon: faRobot,
-  },
-  {
-    period: "Resultado",
-    title: "Procesos más claros",
-    text:
-      "Mi objetivo es que cada mejora técnica se traduzca en menos fricción, más control operativo y una experiencia interna más ágil.",
-    icon: faArrowTrendUp,
-  },
-];
+const timelineIcons = [faBuilding, faTimeline, faRobot, faArrowTrendUp];
 
-const ContainerDescrip: React.FC = () => {
+const ContainerDescrip: React.FC<ContainerDescripProps> = ({ copy }) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -87,25 +56,21 @@ const ContainerDescrip: React.FC = () => {
       ref={rootRef}
     >
       <div className={styles.header}>
-        <span className={`${styles.badge} ${styles.reveal}`}>Trayectoria</span>
+        <span className={`${styles.badge} ${styles.reveal}`}>{copy.badge}</span>
         <h2 id="about-title" className={`${styles.sectionTitle} ${styles.reveal}`}>
-          Un recorrido técnico orientado a negocio, operación e innovación útil.
+          {copy.title}
         </h2>
         <p className={`${styles.intro} ${styles.reveal}`}>
-          He ido evolucionando hacia un perfil híbrido donde conviven
-          desarrollo, infraestructura y automatización. Mi recorrido incluye
-          migración de ERP, cloud migration, soporte técnico y construcción de
-          soluciones web que hagan que la tecnología trabaje con más orden,
-          contexto y eficiencia.
+          {copy.intro}
         </p>
       </div>
 
       <div className={styles.timeline}>
-        {timeline.map(({ period, title, text, icon }, i) => (
+        {copy.timeline.map(({ period, title, text }, i) => (
           <article key={title} className={`${styles.card} ${styles.reveal}`}>
             <div className={styles.cardHeader}>
               <span className={styles.period}>{period}</span>
-              <FontAwesomeIcon className={styles.icon} icon={icon} />
+              <FontAwesomeIcon className={styles.icon} icon={timelineIcons[i]} />
             </div>
             <h3 className={styles.cardTitle}>{title}</h3>
             <p className={styles.cardText}>{text}</p>

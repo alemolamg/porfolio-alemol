@@ -20,6 +20,7 @@ import {
   faServer,
   faWandMagicSparkles,
 } from "@fortawesome/free-solid-svg-icons";
+import type { SiteCopy } from "@/i18n/siteCopy";
 
 export interface Skill {
   name: string;
@@ -30,6 +31,10 @@ interface SkillGroup {
   title: string;
   subtitle: string;
   skills: Skill[];
+}
+
+interface SkillsContainerProps {
+  copy: SiteCopy["skills"];
 }
 
 const groups: SkillGroup[] = [
@@ -76,26 +81,23 @@ const groups: SkillGroup[] = [
   },
 ];
 
-const SkillsContainer: React.FC = () => {
+const SkillsContainer: React.FC<SkillsContainerProps> = ({ copy }) => {
   return (
     <section className={styles.container} id="skills" aria-labelledby="skills-title">
       <div className={styles.header}>
-        <span className={styles.badge}>Capacidades</span>
+        <span className={styles.badge}>{copy.badge}</span>
         <h2 id="skills-title" className={styles.sectionTitle}>
-          Tecnologías y herramientas que uso para construir y automatizar
+          {copy.title}
         </h2>
-        <p className={styles.intro}>
-          Trabajo con un stack amplio, pero siempre con la misma prioridad: que
-          la solución sea mantenible, útil y fácil de operar.
-        </p>
+        <p className={styles.intro}>{copy.intro}</p>
       </div>
 
       <div className={styles.groups}>
-        {groups.map((group) => (
+        {groups.map((group, index) => (
           <article key={group.title} className={styles.group}>
             <div className={styles.groupHeader}>
-              <h3 className={styles.groupTitle}>{group.title}</h3>
-              <p className={styles.groupSubtitle}>{group.subtitle}</p>
+              <h3 className={styles.groupTitle}>{copy.groups[index].title}</h3>
+              <p className={styles.groupSubtitle}>{copy.groups[index].subtitle}</p>
             </div>
             <div className={styles.grid}>
               {group.skills.map((skill) => (

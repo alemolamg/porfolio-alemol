@@ -8,9 +8,10 @@ import { scrollToHash } from "../../app/utils/smoothScroll";
 interface ScrollToTopButtonProps {
   iconStyle?: string;
   containerStyle?: string;
+  label: string;
 }
 
-const ScrollToTopButton: FC<ScrollToTopButtonProps> = ({ iconStyle, containerStyle }) => {
+const ScrollToTopButton: FC<ScrollToTopButtonProps> = ({ iconStyle, containerStyle, label }) => {
   const scrollToTop = () => {
     scrollToHash("#main");
   };
@@ -18,8 +19,8 @@ const ScrollToTopButton: FC<ScrollToTopButtonProps> = ({ iconStyle, containerSty
   return (
     <button
       type="button"
-      aria-label="Volver arriba"
-      title="Volver arriba"
+      aria-label={label}
+      title={label}
       className={containerStyle}
       onClick={scrollToTop}
     >

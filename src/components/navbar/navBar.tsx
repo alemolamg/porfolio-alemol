@@ -4,17 +4,24 @@ import styles from "./navbar.module.scss";
 import LinkIcons from "../../app/utils/links";
 import clsx from "clsx";
 import SmoothAnchor from "../../app/utils/smoothAnchor";
+import type { SiteCopy } from "@/i18n/siteCopy";
+import { localeLabels, locales, type Locale } from "@/i18n/locales";
+import { usePathname, useRouter } from "next/navigation";
 
-const menuItems = [
-  { href: "#main", label: "Inicio" },
-  { href: "#about", label: "Trayectoria" },
-  { href: "#skills", label: "Capacidades" },
-  { href: "#footer", label: "Contacto" },
-];
+interface NavBarProps {
+  copy: SiteCopy["navigation"];
+  locale: Locale;
+}
 
-const MenuLinks = ({ onNavigate }: { onNavigate?: () => void }) => (
+const MenuLinks = ({
+  items,
+  onNavigate,
+}: {
+  items: SiteCopy["navigation"]["items"];
+  onNavigate?: () => void;
+}) => (
   <>
-    {menuItems.map((item) => (
+    {items.map((item) => (
       <li key={item.label}>
         <SmoothAnchor href={item.href} onNavigate={onNavigate}>
           {item.label}
@@ -24,10 +31,24 @@ const MenuLinks = ({ onNavigate }: { onNavigate?: () => void }) => (
   </>
 );
 
-const NavBar: FC = () => {
+const NavBar: FC<NavBarProps> = ({ copy, locale }) => {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLocaleChange = (nextLocale: Locale) => {
+    if (nextLocale === locale) return;
+
+    const segments = pathname.split("/").filter(Boolean);
+    const targetSegments = segments.length === 0 ? [nextLocale] : [nextLocale, ...segments.slice(1)];
+    const targetPath = `/${targetSegments.join("/")}`;
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+
+    router.push(`${targetPath}${hash}`);
+    setOpen(false);
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -52,23 +73,41 @@ const NavBar: FC = () => {
   }, [open]);
 
   return (
-    <nav className={styles.navbar} aria-label="Principal">
-      <SmoothAnchor className={styles.brand} href="#main" aria-label="Ir al inicio">
-        <span className={styles.brandMark}>AMG</span>
-        <span className={styles.brandText}>Alejandro Molero Gómez</span>
+    <nav className={styles.navbar} aria-label={copy.ariaLabel}>
+      <SmoothAnchor className={styles.brand} href="#main" aria-label={copy.brandLabel}>
+        <span className={styles.brandMark}>{copy.brandMark}</span>
+        <span className={styles.brandText}>{copy.brandText}</span>
       </SmoothAnchor>
 
       <ul className={styles.inlineList} role="menubar">
-        <MenuLinks />
+        <MenuLinks items={copy.items} />
       </ul>
 
       <div className={styles.actions}>
+        <div className={styles.localeControl}>
+          <label className={styles.localeLabel} htmlFor="locale-switcher">
+            {copy.languageSwitcherLabel}
+          </label>
+          <select
+            id="locale-switcher"
+            className={styles.localeSelect}
+            value={locale}
+            onChange={(event) => handleLocaleChange(event.target.value as Locale)}
+            aria-label={copy.languageSwitcherLabel}
+          >
+            {locales.map((localeCode) => (
+              <option key={localeCode} value={localeCode}>
+                {localeLabels[localeCode].flag} {localeLabels[localeCode].label}
+              </option>
+            ))}
+          </select>
+        </div>
         <LinkIcons iconStyle={styles.socialIcon} />
         <button
           type="button"
           ref={triggerRef}
           className={styles.menuIcon}
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-label={open ? copy.closeMenuLabel : copy.openMenuLabel}
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
@@ -88,7 +127,7 @@ const NavBar: FC = () => {
             aria-modal="true"
           >
             <ul>
-              <MenuLinks onNavigate={() => setOpen(false)} />
+              <MenuLinks items={copy.items} onNavigate={() => setOpen(false)} />
             </ul>
           </div>
         </>

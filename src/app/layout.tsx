@@ -2,25 +2,12 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { headers } from "next/headers";
+import { defaultLocale, isLocale } from "@/i18n/locales";
+import { getSiteCopy } from "@/i18n/siteCopy";
 
 export const metadata: Metadata = {
-  title: "Alejandro Molero Gómez | Responsable de IT y automatización",
-  description:
-    "Portfolio profesional de Alejandro Molero Gómez, Responsable de IT en Grupoasesores, con foco en desarrollo, automatización, integración de sistemas e inteligencia artificial.",
   metadataBase: new URL("https://alemolamg.com"), // <-- ajusta si tienes dominio
-  applicationName: "Portfolio Alejandro Molero",
-  openGraph: {
-    title: "Alejandro Molero Gómez | Responsable de IT y automatización",
-    description:
-      "Portfolio profesional con enfoque en desarrollo full-stack, orquestación de procesos e inteligencia artificial aplicada.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alejandro Molero Gómez | Responsable de IT y automatización",
-    description:
-      "Portfolio profesional con foco en sistemas, automatización e IA aplicada.",
-  },
   // Ayuda a que el sistema use tu esquema de color CSS
 };
 
@@ -33,14 +20,19 @@ export const viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const requestHeaders = await headers();
+  const localeHeader = requestHeaders.get("x-locale") ?? defaultLocale;
+  const locale = isLocale(localeHeader) ? localeHeader : defaultLocale;
+  const copy = getSiteCopy(locale);
+
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         {/* Landmarks semánticos */}
-        <a href="#main" className="skip-link">Saltar al contenido</a>
+        <a href="#main" className="skip-link">{copy.common.skipToContent}</a>
         {children}
         {/* Analytics deben ir en el body */}
         <Analytics />
