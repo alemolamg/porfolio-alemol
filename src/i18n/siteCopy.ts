@@ -101,7 +101,7 @@ const copy: Record<Locale, SiteCopy> = {
     presentation: {
       kicker: "Portfolio profesional",
       title:
-        "Conecto desarrollo, soporte IT y automatización para crear sistemas más útiles, claros y escalables.",
+        "Desarrollo soluciones, doy soporte técnico y busco maneras de facilitar el día a día del equipo.",
       lead:
         "Soy Alejandro Molero Gómez, Responsable de IT en Grupoasesores. Aporto criterio técnico para construir, integrar y automatizar procesos con una visión muy práctica: menos fricción, más control y mejor trazabilidad. Mi experiencia combina desarrollo web, cloud migration, ERP, soporte a equipos internos e IA aplicada cuando realmente ayuda al proceso.",
       highlights: [
@@ -248,7 +248,7 @@ const copy: Record<Locale, SiteCopy> = {
     presentation: {
       kicker: "Professional portfolio",
       title:
-        "I connect development, IT support and automation to build systems that are more useful, clearer and easier to scale.",
+        "I build tools, troubleshoot technical issues, and look for ways to make day-to-day work easier for the team.",
       lead:
         "I am Alejandro Molero Gómez, IT Lead at Grupoasesores. I bring technical judgment to build, integrate and automate processes with a practical mindset: less friction, more control and better traceability. My background combines web development, cloud migration, ERP, internal team support and applied AI whenever it truly helps the process.",
       highlights: [
