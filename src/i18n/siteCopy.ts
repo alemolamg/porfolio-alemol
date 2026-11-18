@@ -16,7 +16,6 @@ export interface SiteCopy {
   };
   navigation: {
     ariaLabel: string;
-    brandMark: string;
     brandText: string;
     brandLabel: string;
     items: Array<{ href: string; label: string }>;
@@ -25,19 +24,26 @@ export interface SiteCopy {
     languageSwitcherLabel: string;
   };
   presentation: {
-    kicker: string;
     title: string;
     lead: string;
-    highlights: string[];
-    metrics: Array<{ label: string; value: string }>;
-    capabilities: Array<{ title: string; text: string }>;
     name: string;
     role: string;
     imageAlt: string;
     downloadCvLabel: string;
+    projectsLabel: string;
+  };
+  projects: {
+    title: string;
+    items: Array<{
+      id: "picker" | "portfolio";
+      name: string;
+      stack: string;
+      description: string;
+      nextStep?: string;
+      linkLabel: string;
+    }>;
   };
   about: {
-    badge: string;
     title: string;
     intro: string;
     timeline: Array<{
@@ -47,7 +53,6 @@ export interface SiteCopy {
     }>;
   };
   skills: {
-    badge: string;
     title: string;
     intro: string;
     groups: Array<{
@@ -85,13 +90,12 @@ const copy: Record<Locale, SiteCopy> = {
     },
     navigation: {
       ariaLabel: "Principal",
-      brandMark: "AMG",
       brandText: "Alejandro Molero Gómez",
       brandLabel: "Ir al inicio",
       items: [
-        { href: "#main", label: "Inicio" },
+        { href: "#projects", label: "Proyectos" },
         { href: "#about", label: "Trayectoria" },
-        { href: "#skills", label: "Capacidades" },
+        { href: "#skills", label: "Tecnologías" },
         { href: "#footer", label: "Contacto" },
       ],
       openMenuLabel: "Abrir menú",
@@ -99,46 +103,40 @@ const copy: Record<Locale, SiteCopy> = {
       languageSwitcherLabel: "Seleccionar idioma",
     },
     presentation: {
-      kicker: "Portfolio profesional",
       title:
         "Desarrollo soluciones, doy soporte técnico y busco maneras de facilitar el día a día del equipo.",
       lead:
-        "Soy Alejandro Molero Gómez, Responsable de IT en Grupoasesores. Aporto criterio técnico para construir, integrar y automatizar procesos con una visión muy práctica: menos fricción, más control y mejor trazabilidad. Mi experiencia combina desarrollo web, cloud migration, ERP, soporte a equipos internos e IA aplicada cuando realmente ayuda al proceso.",
-      highlights: [
-        "5+ años de experiencia",
-        "Responsable de IT",
-        "Desarrollo full-stack",
-        "Soporte IT y procesos",
-      ],
-      metrics: [
-        { label: "Foco", value: "Sistemas claros" },
-        { label: "Trabajo", value: "Procesos conectados" },
-        { label: "Impacto", value: "Menos fricción" },
-      ],
-      capabilities: [
-        {
-          title: "Orquestación",
-          text: "Diseño flujos y conecto herramientas para que la operación avance con menos pasos manuales.",
-        },
-        {
-          title: "Automatización aplicada",
-          text: "Combino automatismos e IA cuando aportan contexto real, velocidad y menos carga operativa para el equipo.",
-        },
-        {
-          title: "Control operativo",
-          text: "Priorizar trazabilidad, estabilidad y mantenimiento es clave cuando los procesos ya están en producción.",
-        },
-      ],
+        "En Grupoasesores me ocupo del día a día de IT. Desarrollo herramientas internas, conecto sistemas y automatizo tareas que el equipo repite a mano.",
       name: "Alejandro Molero Gómez",
       role: "Responsable de IT y desarrollo · Grupoasesores",
       imageAlt: "Retrato de Alejandro Molero Gómez",
       downloadCvLabel: "Descargar CV",
+      projectsLabel: "Ver proyectos",
+    },
+    projects: {
+      title: "Proyectos seleccionados",
+      items: [
+        {
+          id: "picker",
+          name: "Picker",
+          stack: "Fork para macOS · SwiftUI · PhotoKit",
+          description: "Amplié una app para revisar fotos similares. Mi fork permite seleccionar fotos sueltas o grupos completos y reunirlos en una cola antes de confirmar el borrado.",
+          nextStep: "Estoy diseñando una revisión por tandas para cribar capturas y otras imágenes dudosas sin ir una a una.",
+          linkLabel: "Ver mi aportación a Picker",
+        },
+        {
+          id: "portfolio",
+          name: "Este porfolio",
+          stack: "Next.js · React · Vercel",
+          description: "Mi web personal en español e inglés. Aquí reúno mi trayectoria y lo que voy construyendo. Los cambios se pueden probar en una vista previa antes de publicarlos.",
+          linkLabel: "Ver el código del porfolio",
+        },
+      ],
     },
     about: {
-      badge: "Trayectoria",
-      title: "Un recorrido técnico orientado a negocio, operación e innovación útil.",
+      title: "Trayectoria",
       intro:
-        "He ido evolucionando hacia un perfil híbrido donde conviven desarrollo, infraestructura, soporte y automatización. Mi recorrido pasa por desarrollo full-stack, modernización de ERP, microservicios, cloud migration y mejora de operaciones internas con una idea constante: que la tecnología reduzca fricción y dé más contexto al negocio.",
+        "He trabajado en soporte técnico, desarrollo de aplicaciones, migraciones a la nube y modernización de ERP.",
       timeline: [
         {
           period: "Abril 2026 - Actual",
@@ -170,19 +168,12 @@ const copy: Record<Locale, SiteCopy> = {
           text:
             "Combiné soporte técnico, gestión del ERP JDE Edwards y reporting con MyVision y Crystal Reports, además de participar en la migración de servidores locales a soluciones cloud con OneDrive y SharePoint. Ahí reforcé una base muy operativa, cercana al usuario y orientada a continuidad del servicio.",
         },
-        {
-          period: "Enfoque de trabajo",
-          title: "Desarrollo, integración y automatización útil",
-          text:
-            "Hoy combino desarrollo full-stack, integración de sistemas, automatización y soporte operativo con una prioridad clara: que cada mejora técnica se traduzca en procesos más mantenibles, más trazabilidad y una operación interna más ágil.",
-        },
       ],
     },
     skills: {
-      badge: "Capacidades",
-      title: "Tecnologías y herramientas que uso para construir y automatizar",
+      title: "Tecnologías",
       intro:
-        "Trabajo con un stack amplio, pero siempre con la misma prioridad: que la solución sea mantenible, útil y fácil de operar.",
+        "Herramientas que uso en desarrollo, soporte e infraestructura.",
       groups: [
         {
           title: "Desarrollo",
@@ -206,9 +197,9 @@ const copy: Record<Locale, SiteCopy> = {
       socialLabel: "Redes",
       legal: "© 2026 Alejandro Molero Gómez. Todos los derechos reservados.",
       items: [
-        { href: "#main", label: "Inicio" },
+        { href: "#projects", label: "Proyectos" },
         { href: "#about", label: "Trayectoria" },
-        { href: "#skills", label: "Capacidades" },
+        { href: "#skills", label: "Tecnologías" },
         { href: "#footer", label: "Contacto" },
       ],
     },
@@ -232,13 +223,12 @@ const copy: Record<Locale, SiteCopy> = {
     },
     navigation: {
       ariaLabel: "Main",
-      brandMark: "AMG",
       brandText: "Alejandro Molero Gómez",
       brandLabel: "Go to home",
       items: [
-        { href: "#main", label: "Home" },
+        { href: "#projects", label: "Projects" },
         { href: "#about", label: "Background" },
-        { href: "#skills", label: "Capabilities" },
+        { href: "#skills", label: "Technologies" },
         { href: "#footer", label: "Contact" },
       ],
       openMenuLabel: "Open menu",
@@ -246,46 +236,40 @@ const copy: Record<Locale, SiteCopy> = {
       languageSwitcherLabel: "Select language",
     },
     presentation: {
-      kicker: "Professional portfolio",
       title:
         "I build tools, troubleshoot technical issues, and look for ways to make day-to-day work easier for the team.",
       lead:
-        "I am Alejandro Molero Gómez, IT Lead at Grupoasesores. I bring technical judgment to build, integrate and automate processes with a practical mindset: less friction, more control and better traceability. My background combines web development, cloud migration, ERP, internal team support and applied AI whenever it truly helps the process.",
-      highlights: [
-        "5+ years of experience",
-        "IT Lead",
-        "Full-stack development",
-        "IT support and processes",
-      ],
-      metrics: [
-        { label: "Focus", value: "Clear systems" },
-        { label: "Work", value: "Connected processes" },
-        { label: "Impact", value: "Less friction" },
-      ],
-      capabilities: [
-        {
-          title: "Orchestration",
-          text: "I design flows and connect tools so operations move forward with fewer manual steps.",
-        },
-        {
-          title: "Applied automation",
-          text: "I combine automation and AI when they add real context, speed and less operational load for the team.",
-        },
-        {
-          title: "Operational control",
-          text: "Traceability, stability and maintainability matter most once processes are already in production.",
-        },
-      ],
+        "I look after day-to-day IT at Grupoasesores. I build internal tools, connect systems and automate tasks the team does by hand.",
       name: "Alejandro Molero Gómez",
-      role: "IT Lead and development · Grupoasesores",
+      role: "IT and development lead · Grupoasesores",
       imageAlt: "Portrait of Alejandro Molero Gómez",
       downloadCvLabel: "Download CV",
+      projectsLabel: "View projects",
+    },
+    projects: {
+      title: "Selected projects",
+      items: [
+        {
+          id: "picker",
+          name: "Picker",
+          stack: "macOS fork · SwiftUI · PhotoKit",
+          description: "I extended an app for reviewing similar photos. My fork lets you select individual photos or entire groups and queue them for review before confirming deletion.",
+          nextStep: "I’m designing a batch review flow for screenshots and other photos that might be worth removing.",
+          linkLabel: "See my contribution to Picker",
+        },
+        {
+          id: "portfolio",
+          name: "This portfolio",
+          stack: "Next.js · React · Vercel",
+          description: "My personal site in Spanish and English. It brings together my work history and the projects I’m building. Changes can be tested in a preview before release.",
+          linkLabel: "View the portfolio source",
+        },
+      ],
     },
     about: {
-      badge: "Background",
-      title: "A technical path shaped around business, operations and useful innovation.",
+      title: "Work history",
       intro:
-        "My path has evolved into a hybrid profile where development, infrastructure, support and automation coexist. It includes full-stack development, ERP modernization, microservices, cloud migration and improvement of internal operations, always with the same goal: reducing friction and giving the business clearer systems.",
+        "My background spans technical support, application development, cloud migrations and ERP upgrades.",
       timeline: [
         {
           period: "April 2026 - Present",
@@ -317,19 +301,12 @@ const copy: Record<Locale, SiteCopy> = {
           text:
             "I combined user support, JDE Edwards ERP management and reporting with MyVision and Crystal Reports, while also helping migrate local servers to cloud solutions with OneDrive and SharePoint. It strengthened a practical, user-facing and service continuity mindset.",
         },
-        {
-          period: "Working approach",
-          title: "Development, integration and useful automation",
-          text:
-            "Today I combine full-stack development, systems integration, automation and operational support with a clear priority: every technical improvement should produce more maintainable processes, stronger traceability and smoother internal operations.",
-        },
       ],
     },
     skills: {
-      badge: "Capabilities",
-      title: "Technologies and tools I use to build and automate",
+      title: "Technologies",
       intro:
-        "I work with a broad stack, but the priority stays the same: the solution must be maintainable, useful and easy to operate.",
+        "Tools I use across development, support and infrastructure.",
       groups: [
         {
           title: "Development",
@@ -353,9 +330,9 @@ const copy: Record<Locale, SiteCopy> = {
       socialLabel: "Social",
       legal: "© 2026 Alejandro Molero Gómez. All rights reserved.",
       items: [
-        { href: "#main", label: "Home" },
+        { href: "#projects", label: "Projects" },
         { href: "#about", label: "Background" },
-        { href: "#skills", label: "Capabilities" },
+        { href: "#skills", label: "Technologies" },
         { href: "#footer", label: "Contact" },
       ],
     },

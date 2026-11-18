@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Presentation from "@/components/presentation";
+import Projects from "@/components/projects";
 import ContainerDescrip from "../../components/descriptComponent/containerDescript";
 import SkillsContainer from "@/components/technologies/skillsContainer";
 import Footer from "@/components/footer/footer";
@@ -55,6 +56,7 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
   return (
     <main id="main">
       <Presentation copy={copy.presentation} navigation={copy.navigation} locale={locale} />
+      <Projects copy={copy.projects} />
       <ContainerDescrip copy={copy.about} />
       <SkillsContainer copy={copy.skills} />
       <Footer copy={copy.footer} common={copy.common} />

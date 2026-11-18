@@ -1,0 +1,58 @@
+.projects {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding: 0 var(--page-gutter) clamp(2.5rem, 6vw, 5rem);
+
+  h2 {
+    margin: 0;
+    padding: clamp(1.5rem, 3.25vw, 2.75rem) 0 0.85rem;
+    border-top: 1px solid var(--page-rule);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    letter-spacing: -0.035em;
+  }
+}
+
+.project {
+  display: grid;
+  gap: 0.65rem 2.5rem;
+  padding-block: 1.25rem;
+
+  & + & {
+    border-top: 1px solid var(--page-rule);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+  }
+}
+
+.stack {
+  margin: 0.4rem 0 0;
+  color: var(--page-muted);
+  font-size: 0.95rem;
+}
+
+.details {
+  max-width: 74ch;
+  line-height: 1.65;
+
+  p {
+    margin: 0 0 0.5rem;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 0.2rem;
+    color: var(--page-link);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+}
+
+@media (min-width: 760px) {
+  .project {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}

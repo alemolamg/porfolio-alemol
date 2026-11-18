@@ -87,7 +87,6 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({ copy }) => {
   return (
     <section className={styles.container} id="skills" aria-labelledby="skills-title">
       <div className={styles.header}>
-        <span className={styles.badge}>{copy.badge}</span>
         <h2 id="skills-title" className={styles.sectionTitle}>
           {copy.title}
         </h2>

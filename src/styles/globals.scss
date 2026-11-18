@@ -5,8 +5,6 @@
 
 /* Variables CSS (tema claro/oscuro) */
 :root {
-  --bg: #f3f6fb;
-  --bg-dark: #08111f;
   --surface: rgba(255, 255, 255, 0.82);
   --surface-strong: rgba(255, 255, 255, 0.94);
   --surface-dark: rgba(12, 18, 30, 0.82);
@@ -19,7 +17,13 @@
   --primary-soft: rgba(63, 106, 152, 0.14);
   --accent: #14b8a6;
   --accent-soft: rgba(20, 184, 166, 0.12);
-  --nav-offset: 5rem;
+  --nav-offset: 4.25rem;
+  --page-width: 96rem;
+  --page-gutter: clamp(1rem, 3.5vw, 3.5rem);
+  --page-background: #faf8f4;
+  --page-muted: #495363;
+  --page-rule: #d9d5cd;
+  --page-link: #28528b;
 
   --gray-100: hsl(220 33% 96%);
   --gray-300: hsl(221 20% 78%);
@@ -27,8 +31,6 @@
   --gray-600: hsl(217 19% 44%);
 
   --menu-bg: #0e1726;
-  --desc-bg: linear-gradient(180deg, #eef3fb 0%, #f8fafc 100%);
-  --desc-bg-dark: linear-gradient(180deg, #0b1320 0%, #0a101a 100%);
   --desc-small: #0f172a;
   --footer-bg: #07111d;
   --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -47,8 +49,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: var(--bg-dark);
     --text: var(--text-dark);
+    --page-background: #101722;
+    --page-muted: #b9c4d4;
+    --page-rule: #34404f;
+    --page-link: #a7c9fa;
   }
 }
 
@@ -58,10 +63,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background:
-    radial-gradient(900px 500px at 15% 5%, rgba(37, 99, 235, 0.10), transparent 60%),
-    radial-gradient(700px 380px at 85% 10%, rgba(20, 184, 166, 0.08), transparent 55%),
-    var(--bg);
+  background: var(--page-background);
   color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: clip;

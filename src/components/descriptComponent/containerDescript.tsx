@@ -6,7 +6,6 @@ import {
   faArrowTrendUp,
   faBuilding,
   faGraduationCap,
-  faLightbulb,
   faRobot,
   faTimeline,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +15,7 @@ interface ContainerDescripProps {
   copy: SiteCopy["about"];
 }
 
-const timelineIcons = [faBuilding, faTimeline, faGraduationCap, faRobot, faArrowTrendUp, faLightbulb];
+const timelineIcons = [faBuilding, faTimeline, faGraduationCap, faRobot, faArrowTrendUp];
 
 const ContainerDescrip: React.FC<ContainerDescripProps> = ({ copy }) => {
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -58,7 +57,6 @@ const ContainerDescrip: React.FC<ContainerDescripProps> = ({ copy }) => {
       ref={rootRef}
     >
       <div className={styles.header}>
-        <span className={`${styles.badge} ${styles.reveal}`}>{copy.badge}</span>
         <h2 id="about-title" className={`${styles.sectionTitle} ${styles.reveal}`}>
           {copy.title}
         </h2>
@@ -76,7 +74,6 @@ const ContainerDescrip: React.FC<ContainerDescripProps> = ({ copy }) => {
             </div>
             <h3 className={styles.cardTitle}>{title}</h3>
             <p className={styles.cardText}>{text}</p>
-            <div className={styles.cardFoot}>0{i + 1}</div>
           </article>
         ))}
       </div>

@@ -4,7 +4,7 @@ const getScrollTopForHash = (hash: string) => {
   const target = document.querySelector<HTMLElement>(hash);
   if (!target) return null;
 
-  const nav = document.querySelector<HTMLElement>('nav[aria-label="Principal"]');
+  const nav = document.querySelector<HTMLElement>("main > nav");
   const navHeight = nav?.offsetHeight ?? 80;
   const targetTop = target.getBoundingClientRect().top + window.scrollY;
 

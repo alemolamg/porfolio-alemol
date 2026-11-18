@@ -1,27 +1,14 @@
 .container {
-  padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 2.5rem);
-  background: var(--desc-bg);
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding: clamp(2rem, 4vw, 3.75rem) var(--page-gutter);
   color: var(--text);
 }
 
 .header {
-  max-width: 960px;
-  margin: 0 auto 2rem;
+  margin: 0 0 1.5rem;
   display: grid;
-  gap: 0.9rem;
-  text-align: center;
-}
-
-.badge {
-  justify-self: center;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(63, 106, 152, 0.12);
-  color: var(--primary-darker);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  gap: 0.6rem;
 }
 
 .sectionTitle {
@@ -31,16 +18,14 @@
 }
 
 .intro {
-  margin: 0 auto;
+  margin: 0;
   max-width: 70ch;
   font-size: clamp(1rem, 2vw, 1.12rem);
   line-height: 1.75;
-  color: rgba(12, 22, 36, 0.76);
+  color: var(--page-muted);
 }
 
 .timeline {
-  max-width: 1180px;
-  margin: 0 auto;
   display: grid;
   gap: 1.15rem;
 
@@ -48,8 +33,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: 1400px) {
-    max-width: 1440px;
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.3rem;
   }
@@ -59,7 +43,6 @@
   background: var(--surface-strong);
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: calc(var(--radius) + 2px);
-  box-shadow: var(--shadow-1);
   padding: 1.4rem;
   display: grid;
   gap: 0.95rem;
@@ -95,15 +78,7 @@
 .cardText {
   margin: 0;
   line-height: 1.82;
-  color: rgba(12, 22, 36, 0.76);
-}
-
-.cardFoot {
-  justify-self: end;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: rgba(12, 22, 36, 0.34);
+  color: var(--page-muted);
 }
 
 .reveal {
@@ -132,15 +107,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .container {
-    background: var(--desc-bg-dark);
-  }
-
-  .badge {
-    background: rgba(63, 106, 152, 0.18);
-    color: #d7e7f7;
-  }
-
   .intro,
   .cardText {
     color: rgba(226, 232, 240, 0.76);
@@ -153,10 +119,6 @@
 
   .period {
     color: #b7d1ec;
-  }
-
-  .cardFoot {
-    color: rgba(226, 232, 240, 0.3);
   }
 
   .sectionTitle,

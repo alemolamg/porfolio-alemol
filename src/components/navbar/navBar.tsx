@@ -1,8 +1,6 @@
 "use client";
 import React, { FC, useEffect, useRef, useState } from "react";
 import styles from "./navbar.module.scss";
-import LinkIcons from "../../app/utils/links";
-import clsx from "clsx";
 import SmoothAnchor from "../../app/utils/smoothAnchor";
 import type { SiteCopy } from "@/i18n/siteCopy";
 import { localeLabels, locales, type Locale } from "@/i18n/locales";
@@ -70,11 +68,10 @@ const NavBar: FC<NavBarProps> = ({ copy, locale }) => {
   return (
     <nav className={styles.navbar} aria-label={copy.ariaLabel}>
       <SmoothAnchor className={styles.brand} href="#main" aria-label={copy.brandLabel}>
-        <span className={styles.brandMark}>{copy.brandMark}</span>
         <span className={styles.brandText}>{copy.brandText}</span>
       </SmoothAnchor>
 
-      <ul className={styles.inlineList} role="menubar">
+      <ul className={styles.inlineList}>
         <MenuLinks items={copy.items} />
       </ul>
 
@@ -97,7 +94,6 @@ const NavBar: FC<NavBarProps> = ({ copy, locale }) => {
             ))}
           </select>
         </div>
-        <LinkIcons iconStyle={styles.socialIcon} />
         <button
           type="button"
           ref={triggerRef}
@@ -116,10 +112,8 @@ const NavBar: FC<NavBarProps> = ({ copy, locale }) => {
           <div className={styles.backdrop} onClick={() => setOpen(false)} aria-hidden />
           <div
             id="mobile-menu"
-            className={clsx(styles.menuPanel, styles.menuPanelOpen)}
+            className={styles.menuPanel}
             ref={panelRef}
-            role="dialog"
-            aria-modal="true"
           >
             <ul>
               <MenuLinks items={copy.items} onNavigate={() => setOpen(false)} />

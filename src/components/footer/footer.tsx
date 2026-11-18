@@ -27,18 +27,11 @@ const Footer: React.FC<FooterProps> = ({ copy, common }) => {
         <nav className={styles.quick} aria-label={copy.sectionsLabel}>
           <h4>{copy.sectionsLabel}</h4>
           <ul>
-            <li>
-              <SmoothAnchor href="#main">{copy.items[0].label}</SmoothAnchor>
-            </li>
-            <li>
-              <SmoothAnchor href="#about">{copy.items[1].label}</SmoothAnchor>
-            </li>
-            <li>
-              <SmoothAnchor href="#skills">{copy.items[2].label}</SmoothAnchor>
-            </li>
-            <li>
-              <SmoothAnchor href="#footer">{copy.items[3].label}</SmoothAnchor>
-            </li>
+            {copy.items.map(({ href, label }) => (
+              <li key={href}>
+                <SmoothAnchor href={href}>{label}</SmoothAnchor>
+              </li>
+            ))}
           </ul>
         </nav>
 
