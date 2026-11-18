@@ -6,7 +6,6 @@ import clsx from "clsx";
 import SmoothAnchor from "../../app/utils/smoothAnchor";
 import type { SiteCopy } from "@/i18n/siteCopy";
 import { localeLabels, locales, type Locale } from "@/i18n/locales";
-import { usePathname, useRouter } from "next/navigation";
 
 interface NavBarProps {
   copy: SiteCopy["navigation"];
@@ -35,19 +34,15 @@ const NavBar: FC<NavBarProps> = ({ copy, locale }) => {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
-  const router = useRouter();
-  const pathname = usePathname();
 
   const handleLocaleChange = (nextLocale: Locale) => {
     if (nextLocale === locale) return;
 
-    const segments = pathname.split("/").filter(Boolean);
-    const targetSegments = segments.length === 0 ? [nextLocale] : [nextLocale, ...segments.slice(1)];
-    const targetPath = `/${targetSegments.join("/")}`;
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
-
-    router.push(`${targetPath}${hash}`);
-    setOpen(false);
+    const { pathname, search, hash } = window.location;
+    const [, ...segments] = pathname.split("/").filter(Boolean);
+    const targetPath = [nextLocale, ...segments].join("/");
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- The root layout must render again to update the document language.
+    window.location.assign(`/${targetPath}${search}${hash}`);
   };
 
   useEffect(() => {
